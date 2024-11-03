@@ -39,46 +39,41 @@
           <div class="p-sidebar__reco-articles p-sidebar-reco-articles">
             <div class="p-sidebar__title">
               <h3>おすすめの記事</h3>
-            </div>            
-            <a href="">
-              <div class="p-sidebar-reco-articles__list">                
-                <div class="p-sidebar-reco-articles__image">    
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-details-sp160.110.jpg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details-sp160.110.jpg" alt="">
-                  </picture>              
-                </div>
-                <div class="p-sidebar-reco-articles__title u-flex-1">
-                  <p>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                </div>
-              </div>  
-            </a>
-            <a href="">
-              <div class="p-sidebar-reco-articles__list">                
-                <div class="p-sidebar-reco-articles__image"> 
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-details-sp160.110.jpg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details-sp160.110.jpg" alt="">
-                  </picture>                   
-                </div>
-                <div class="p-sidebar-reco-articles__title u-flex-1">
-                 <p>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                </div>
-              </div>  
-            </a>
-            <a href="">
-              <div class="p-sidebar-reco-articles__list">                
-                <div class="p-sidebar-reco-articles__image"> 
-                  <picture>
-                   <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-details-sp160.110.jpg">
-                   <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details-sp160.110.jpg" alt="">
-                 </picture>                
-                </div>
-                <div class="p-sidebar-reco-articles__title u-flex-1">
-                 <p>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                </div>
-              </div>  
-            </a> 
+            </div> 
+            <?php
+            $args = array(
+              'posts_per_page' => 3,
+              'post_type' => 'blog',
+              'taxonomy' => 'blog_recommend',
+              'term' => 'on',
+              'orderby' => 'date',
+              'order' => 'DESC'
+            );
+            $the_query = new WP_Query($args);
+            ?>
+            <?php if( $the_query->have_posts() ):
+            while( $the_query->have_posts() ): $the_query->the_post(); ?>
+            <a href="<?php echo get_permalink($post->ID); ?>" class="p-sidebar-reco-articles__list">                
+              <div class="p-sidebar-reco-articles__image">    
+              <?php
+              $thumbnail_id = get_post_thumbnail_id($post->ID);
+              $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
+              if ( get_post_thumbnail_id($post->ID) ):
+              ?>
+                <img src="<?php echo $thumb_url[0]; ?>" alt="">
+              <?php endif ;?>             
+              </div>
+              <div class="p-sidebar-reco-articles__title u-flex-1">
+                <p>
+                  <?php if(mb_strlen($post->post_title)>23) {
+                  $title= mb_substr($post->post_title,0,23); echo $title . '...';} 
+                  else {echo $post->post_title;} ?>
+                </p>
+              </div>
+            </a>                       
+            <?php endwhile; ?>
+              <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
           </div>
 
           <div class="p-sidebar__category p-sidebar-category">
