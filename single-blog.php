@@ -29,7 +29,11 @@
           <time datetime="the_time('Y-m-d')" class="p-blog-details-main__date"><?php the_time('Y.m.d'); ?></time>
           
           <div class="p-blog-details-main__sns-links">
-            <a href="">           
+            <?php
+              $url = get_permalink();
+              $title = get_the_title();
+            ?>
+            <a href="<?php echo esc_url( 'https://www.facebook.com/share.php?u=' . $url ); ?>" target="_blank" rel="noopener">       
               <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--fb">   
                 <picture>
                   <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/fb-sp.svg">
@@ -37,7 +41,7 @@
                 </picture>              
               </div>
             </a>
-            <a href="">      
+            <a href="<?php echo esc_url( 'https://twitter.com/share?url=' . $url . '&text=' . $title ); ?>" target="_blank" rel="noopener">      
               <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--tw">         
                 <picture>         
                   <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/tw-sp.svg">
@@ -45,24 +49,24 @@
                 </picture>   
               </div>
             </a>
-            <a href="">    
-              <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--hatena">
+            <a href="<?php echo esc_url( 'http://b.hatena.ne.jp/add?mode=confirm&url=' . $url . '&title=' . $title ); ?>" target="_blank" rel="noopener">
+            <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--hatena">
                 <picture>               
                   <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/hatena-sp.svg">
                   <img src="<?php echo get_template_directory_uri(); ?>/images/hatena.svg" alt="haten">
                 </picture>  
               </div>
             </a>
-            <a href="">    
-              <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--line">
+            <a href="<?php echo esc_url( 'https://line.me/R/msg/text/?' . $url . $title ); ?>" target="_blank" rel="noopener">            
+            <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--line">
                 <picture>                     
                   <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/line-sp.svg">
                   <img src="<?php echo get_template_directory_uri(); ?>/images/line.svg" alt="line">
                 </picture>
               </div>
             </a>
-            <a href="">    
-              <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--pocket">
+            <a href="<?php echo esc_url( 'http://getpocket.com/edit?url=' . $url . '&title=' . $title ); ?>" target="_blank" rel="noopener">            
+            <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--pocket">
                 <picture>                 
                   <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/pocket-sp.svg">
                   <img src="<?php echo get_template_directory_uri(); ?>/images/pocket.svg" alt="pocket">

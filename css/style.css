@@ -161,20 +161,24 @@ a {
 }
 
 /* マーカーのスタイルをカスタマイズ */
-.p-blog-details-main__under-sns-links blockquote {
+blockquote {
   background: rgb(232, 232, 232);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 10px 30px;
-  margin-bottom: 31px;
+  padding: 20px 30px 9px;
+  margin-bottom: 30px;
 }
-
-.p-blog-details-main__under-sns-links blockquote::before {
+blockquote p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  background: rgb(232, 232, 232);
+  margin-bottom: 0;
+  padding-left: 37px;
+  position: relative;
+}
+blockquote p::before {
+  content: url(../images/path42.svg);
   width: 27px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin-right: 10px;
+  position: absolute;
+  left: 0;
 }
 
 .p-blog-details-main__under-sns-links a {
