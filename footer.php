@@ -40,16 +40,7 @@
        </div>
      </div>
     </footer>
-    <!-- トップに戻るボタン -->
-    <a href="#" class="c-top-back-btn c-top-back-btn--91-79 u-scroll-show">
-      <div class="c-top-back-btn__icon">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/top-back-btn.svg" alt="top">
-      </div>
-    </a>
-    <!-- 問い合わせボタン -->
-    <?php get_template_part('template-parts/contact-button'); ?>
-  </div>
-
+   </div>
   <?php wp_footer(); ?>
  </body>
 </html>

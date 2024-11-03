@@ -91,6 +91,103 @@ a {
   }
 }
 
+.p-blog-details-main__under-sns-links {
+  margin-bottom: 60px;
+  padding-top: 4px;
+}
+
+.p-blog-details-main__under-sns-links--notice {
+  margin-bottom: 0;
+}
+
+.p-blog-details-main__under-sns-links p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.p-blog-details-main__under-sns-links h2 {
+  font-size: 2rem;
+  margin-block: 42px 20px;
+  text-align: left;
+  background-color: yellow;
+}
+
+.p-blog-details-main__under-sns-links h3 {
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 18px;
+  padding-left: 11px;
+  position: relative;
+  text-align: left;
+}
+
+.p-blog-details-main__under-sns-links h3::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.p-blog-details-main__under-sns-links figure {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 200px;
+  overflow: hidden;
+  margin-block: 17px 30px;
+}
+
+.p-blog-details-main__under-sns-links figure img {
+  height: auto;
+}
+
+.p-blog-details-main__under-sns-links ul,
+.p-blog-details-main__under-sns-links ol {
+  margin-bottom: 41px;
+  list-style: disc; /* 親要素にマーカーを指定し、li（子）の前に出現*/
+  padding-left: 20px;
+}
+
+.p-blog-details-main__under-sns-links li {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* マーカーのスタイルをカスタマイズ */
+.p-blog-details-main__under-sns-links blockquote {
+  background: rgb(232, 232, 232);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 30px;
+  margin-bottom: 31px;
+}
+
+.p-blog-details-main__under-sns-links blockquote::before {
+  width: 27px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.p-blog-details-main__under-sns-links a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(203, 0, 0);
+}
+
+.p-blog-details-main__under-sns-links hr {
+  border-top: 0.5px solid;
+  border-bottom: none;
+}
+
 .c-hamburger {
   width: 7.1rem;
   height: 100%;
@@ -2045,6 +2142,7 @@ a {
   font-size: 1.8rem;
   line-height: 1.6666666667;
   text-align: left;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 767px) {
   .p-blog-details-main__01-text {

@@ -33,3 +33,7 @@ function custom_theme_footer_scripts() {
     wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js', array('slick-js', 'simplebar-js'), null, true);
 }
 add_action('wp_enqueue_scripts', 'custom_theme_footer_scripts');
+
+
+//サムネイル有効化
+add_theme_support('post-thumbnails');
