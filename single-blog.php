@@ -94,7 +94,7 @@
                 <div class="p-blog-details-main__article-item-02">
                   <?php if(has_post_thumbnail()): ?>
                   <div class="p-blog-details-main__article-image pc">
-                    <img src="<?php echo get_the_post_thumbnail_url($prev_post->ID); ?>" alt="フォロワーではなくファンを増やせとは？">
+                    <img src="<?php echo get_the_post_thumbnail_url($prev_post->ID); ?>" alt="">
                   </div>
                   <?php endif; ?>
                   <p class="p-blog-details-main__article-title u-flex-1">
@@ -120,7 +120,7 @@
               <div class="p-blog-details-main__article-item-02">
                 <?php if(has_post_thumbnail()): ?>
                 <div class="p-blog-details-main__article-image pc">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details98.jpg" alt="フォロワーではなくファンを増やせとは？">
+                  <img src="<?php echo get_the_post_thumbnail_url($next_post->ID); ?>" alt="">
                 </div>
                 <?php endif; ?>
                 <p class="p-blog-details-main__article-title u-flex-1">
