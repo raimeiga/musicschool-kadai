@@ -82,6 +82,7 @@
           <!-- 前後記事のテンプレパーツ読み込み -->
           <?php get_template_part('template-parts/single-arrows-area', '', $args = array('image_area' => 'has', 'post_type' => 'blog')); ?>
 
+          
           <div class="p-blog-details-main__related-articles p-blog-details-main-related-articles">
             <div class="p-blog-details-main-related-articles__label">
               <p>関連記事</p>
