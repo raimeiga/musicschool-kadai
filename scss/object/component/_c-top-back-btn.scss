@@ -1,0 +1,77 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+
+.c-top-back-btn { 
+ width: 68px; 
+ height: 68px;
+ background-color: rgba(0, 0, 0, 0.502);
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ // position: fixed;
+ // right: 10rem; 
+ // bottom: 9.1rem;
+ opacity: 0;
+ visibility: hidden;
+ transition: background-color 0.4s, opacity 0.4s, visibility 0.4s; 
+ z-index: 999;
+ // @include sp {
+ //   position: fixed;   
+ //   right: 2rem; 
+ //   bottom: 7.9rem;  
+ // }
+}
+
+.c-top-back-btn:hover {
+ background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.c-top-back-btn--91-79 {
+ position: fixed;
+ right: 10rem; 
+ bottom: 9.1rem;
+ @include sp {
+  position: fixed;   
+   right: 2rem; 
+   bottom: 7.9rem;  
+ }
+}
+
+.c-top-back-btn--91-79.fixed-position-long {
+ position: absolute;
+ right: 10rem; 
+ bottom: 37.5rem;
+ @include sp {  
+  right: 2rem; 
+  bottom: 38.5rem;
+ }
+}
+
+.c-top-back-btn--30-18 {
+ position: fixed;
+ right: 10rem; 
+ bottom: 3rem;
+ @include sp {
+  position: fixed;   
+  right: 2rem; 
+  bottom: 1.8rem;  
+ }
+}
+
+.c-top-back-btn--30-18.fixed-position-short {
+ position: absolute;
+ right: 10rem; 
+ bottom: 31.4rem;
+ @include sp {  
+  right: 2rem; 
+  bottom: 32.8rem;  
+ }
+}
+
+
+.c-top-back-btn__icon {
+ width: 43%;
+}
+

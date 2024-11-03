@@ -1,0 +1,12 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.p-blog-details__inner {
+ display: flex;
+ justify-content: space-between;
+ padding-block: 6.8rem 15.8rem;
+ @include sp {
+  display: block;
+  padding-block: 5rem 19.2rem;
+ }
+}

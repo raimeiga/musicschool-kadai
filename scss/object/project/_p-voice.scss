@@ -1,0 +1,72 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+
+.p-voice__inner {
+  max-width: 108rem;
+  // padding-inline: 7.9rem;
+  padding-block: 6.4rem 5.7rem;
+  margin: 0 auto;   
+  @include sp {   
+   width: 33.5rem;   
+   padding-block: 4.8rem 5rem;   
+  }
+}
+
+.p-voice__inner h2 {
+  color: #fff;  
+}
+
+.p-voice__lists { 
+  // width: 100%;
+  width: 94rem;
+  padding-top: 3.6rem;
+  padding-inline: 3rem;  
+  margin: auto; 
+  //overflow: hidden; // スライドしない部分を隠す  
+  @include sp {
+    width: 100%;
+    padding-inline: 0;
+    margin: 0 auto; 
+  }
+}
+
+.slick-prev, .slick-next {
+ display: block;
+  background: transparent; /* 背景を透明に */
+  border: none; /* ボーダーを消す */
+  outline: none; /* アウトラインを消す */
+  cursor: pointer; /* カーソルをポインターに */
+  position: absolute; /* 矢印を絶対位置に */
+  top: 47%; /* 縦位置を中央に */
+  transform: translateY(-50%); /* 中央に合わせる */
+  z-index: 10; //これないとprev矢印が見えない。
+  @include sp {
+    top: 48%;
+    transform: translateY(-50%); /* 中央に合わせる */
+    opacity: 1;
+    z-index: 10; //これないとprev矢印が見えない。
+  }
+}
+
+.slick-prev {
+  left: -0.2rem; /* 左矢印の位置 */
+  @include sp {
+    left: 0;
+  }
+}
+
+.slick-next {
+  right: -0.2rem; /* 右矢印の位置 */
+  @include sp {
+    right: 0;
+  }
+}
+
+.slick-prev img, .slick-next img { 
+  width: 2.8rem; /* 矢印のサイズを調整 */
+  height: auto; /* 高さを自動調整 */
+}
+
+
+

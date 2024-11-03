@@ -1,0 +1,51 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+
+.p-voice-list {
+  // width: 27rem; 
+  // slick使うと、スライドの幅はslickが決めて
+  // くるので、widthを上書きできない
+  margin-inline: 1.2rem;   
+  @include sp {   
+    margin-inline: 0;      
+  }
+}
+
+// 親（p-voice-list__image）の幅はslickが勝手
+// に決めているっぽいので、親にwidthを書かずともOKと判断
+.p-voice-list__image img {
+  transition: transform .2s;
+  // width: 100%;
+  aspect-ratio: 270 / 190;
+  object-fit: cover; 
+  @include sp {
+    aspect-ratio: 335 / 200;
+  } 
+}
+
+.p-voice-list:hover .p-voice-list__image img {
+ transform: scale(1.05);  
+}
+
+.p-voice-list__name  {
+  padding-block: 1.7rem 1rem;
+  color: #fff;
+  //font-size: 2.2rem;
+  font-size: clamp(16px, calc(22 / 1080 * 100vw), 22px); // フォントサイズを16pxから22pxの範囲に制限
+  font-weight: 600;
+  line-height: calc(33 / 22);
+  text-align: center; 
+  @include sp {
+   font-size:2.2rem;
+   padding-block: 2.7rem 1rem;
+  }
+}
+
+.p-voice-list__text  {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: calc(30 / 18); 
+  text-align: left; 
+}
+
