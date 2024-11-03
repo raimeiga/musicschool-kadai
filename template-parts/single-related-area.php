@@ -26,10 +26,7 @@
           $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
           if ( get_post_thumbnail_id($post->ID) ):
           ?>
-          <picture>
-            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-details-sp160.110.jpg">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details200.140.jpg" alt="フォロワーではなくファンを増やせとは？">
-          </picture>
+            <img src="<?php echo $thumb_url[0]; ?>" alt="">
           <?php endif; ?>
         </div>
         <p class="c-caption c-caption--w80"><?php echo $term->name; ?></p>
