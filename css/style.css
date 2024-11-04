@@ -622,6 +622,10 @@ blockquote p::before {
   color: #fff;
 }
 
+.c-pagination__item--active a {
+  cursor: default; /* 最初のリンクにデフォルトカーソルを適用 */
+}
+
 .c-pagination__item:first-of-type a {
   color: #fff;
 }
@@ -2628,6 +2632,9 @@ blockquote p::before {
   width: 4rem;
   display: grid;
   place-content: center;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  cursor: pointer;
 }
 @media only screen and (max-width: 767px) {
   .p-sidebar-blog-search__btn-bg {
@@ -2639,9 +2646,6 @@ blockquote p::before {
   width: 2.1rem;
   height: 2.3rem;
   margin: 0.3rem 0 0 0.2rem;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-  cursor: pointer;
 }
 @media only screen and (max-width: 767px) {
   .p-sidebar-blog__search-button {
@@ -2650,7 +2654,7 @@ blockquote p::before {
   }
 }
 
-.p-sidebar-blog__search-button:hover {
+.p-sidebar-blog-search__btn-bg:hover {
   opacity: 0.5;
 }
 
@@ -2735,7 +2739,7 @@ blockquote p::before {
   border-bottom: 0.05rem solid;
 }
 
-.p-sidebar-category__name a {
+.p-sidebar-category__name-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
