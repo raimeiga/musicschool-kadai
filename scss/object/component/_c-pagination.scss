@@ -15,6 +15,10 @@
  color: #fff;
 }
 
+.c-pagination__item--active a {
+ cursor: default; /* 最初のリンクにデフォルトカーソルを適用 */
+}
+
 .c-pagination__item:first-of-type a {
  color: #fff;
 }
