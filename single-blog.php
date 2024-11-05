@@ -2,18 +2,8 @@
 <?php get_header(); ?>
    
     <main>
-      <!-- パンくずリスト -->
-       <div class="c-breadcrumb-wrap">
-         <div class="c-breadcrumb">
-           <a href="index.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines">ホーム</a>
-           <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">&#62;</p>
-           <a href="blog_list.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines">ブログ</a>
-           <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">&#62;</p>
-           <a href="blog_details.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines">ギター</a>
-           <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">&#62;</p><br class="sp">
-           <p class="c-breadcrumb__text c-breadcrumb__text--blog-details">アルペジオが劇的に向上する３つの習慣</p>
-         </div>
-       </div>
+      <!-- パンくずリストのテンプレパーツを読み込み -->
+      <?php get_template_part('template-parts/breadcrumbs'); ?>
 
       <?php while ( have_posts() ): the_post(); ?>
       <div class="p-blog-details__inner l-inner">

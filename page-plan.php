@@ -14,14 +14,8 @@
          <h1 class="p-mv__title" >プラン・ 料金</h1>
        </div>  
      </div>    
-     <!-- パンくずリスト -->
-     <div class="c-breadcrumb-wrap">
-       <div class="c-breadcrumb">       
-         <a href="index.html" class="c-breadcrumb__text c-breadcrumb__text--1-line">ホーム</a>
-         <p class="c-breadcrumb__text c-breadcrumb__text--1-line">&#62;</p>
-         <p class="c-breadcrumb__text c-breadcrumb__text--1-line">プラン・料金</p>
-       </div>
-     </div>
+    <!-- パンくずリストのテンプレパーツを読み込み -->
+    <?php get_template_part('template-parts/breadcrumbs'); ?>
 
      <!-- p-plan -->
      <div class="p-plan__inner l-inner">

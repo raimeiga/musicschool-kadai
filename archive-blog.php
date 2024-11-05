@@ -14,7 +14,7 @@
           <h1 class="p-mv__title" >ブログ</h1>
         </div>  
       </div>    
-      <!-- パンくずリスト -->
+      <!-- パンくずリストのテンプレパーツを読み込み -->
       <?php get_template_part('template-parts/breadcrumbs'); ?>
 
 
