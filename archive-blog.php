@@ -16,12 +16,16 @@
       </div>    
       <!-- パンくずリスト -->
       <div class="c-breadcrumb-wrap">
+        <div class="c-breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+          <?php if(function_exists('bcn_display')) { bcn_display(); }?>        </div>
+        </div>
+      <!-- <div class="c-breadcrumb-wrap">
         <div class="c-breadcrumb">
           <a href="index.html" class="c-breadcrumb__text c-breadcrumb__text--1-line">ホーム</a>
-          <p class="c-breadcrumb__text c-breadcrumb__text--1-line">></p>
+          <p class="c-breadcrumb__text c-breadcrumb__text--1-line">&#62;</p>
           <p class="c-breadcrumb__text c-breadcrumb__text--1-line">ブログ</p>
         </div>
-      </div>
+      </div> -->
 
       <div class="p-blog__inner-blog-list l-inner">
         <?php
