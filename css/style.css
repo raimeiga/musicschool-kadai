@@ -92,8 +92,7 @@ a {
 }
 
 .p-blog-details-main__under-sns-links {
-  margin-bottom: 60px;
-  padding-top: 4px;
+  padding-top: 0.4rem;
 }
 
 .p-blog-details-main__under-sns-links--notice {
@@ -108,23 +107,23 @@ a {
 
 .p-blog-details-main__under-sns-links h2 {
   font-size: 2rem;
-  margin-block: 42px 20px;
+  margin-block: 4.2rem 2rem;
   text-align: left;
   background-color: yellow;
 }
 
 .p-blog-details-main__under-sns-links h3 {
-  font-size: 20px;
-  margin-top: 50px;
-  margin-bottom: 18px;
-  padding-left: 11px;
+  font-size: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 1.8rem;
+  padding-left: 1.1rem;
   position: relative;
   text-align: left;
 }
 
 .p-blog-details-main__under-sns-links h3::before {
   content: "";
-  width: 3px;
+  width: 0.3rem;
   height: 100%;
   background: #000;
   position: absolute;
@@ -137,10 +136,10 @@ a {
 .p-blog-details-main__under-sns-links figure {
   width: 100%;
   height: 100%;
-  max-width: 300px;
-  max-height: 200px;
+  max-width: 30rem;
+  max-height: 20rem;
   overflow: hidden;
-  margin-block: 17px 30px;
+  margin-block: 1.7rem 3rem;
 }
 
 .p-blog-details-main__under-sns-links figure img {
@@ -149,9 +148,9 @@ a {
 
 .p-blog-details-main__under-sns-links ul,
 .p-blog-details-main__under-sns-links ol {
-  margin-bottom: 41px;
+  margin-bottom: 4.1rem;
   list-style: disc; /* 親要素にマーカーを指定し、li（子）の前に出現*/
-  padding-left: 20px;
+  padding-left: 2rem;
 }
 
 .p-blog-details-main__under-sns-links li {
@@ -163,20 +162,20 @@ a {
 /* マーカーのスタイルをカスタマイズ */
 blockquote {
   background: rgb(232, 232, 232);
-  padding: 20px 30px 9px;
-  margin-bottom: 30px;
+  padding: 2rem 3rem 0.9rem;
+  margin-bottom: 3rem;
 }
 blockquote p {
   font-size: 1.8rem;
   line-height: 1.6;
   background: rgb(232, 232, 232);
   margin-bottom: 0;
-  padding-left: 37px;
+  padding-left: 3.7rem;
   position: relative;
 }
 blockquote p::before {
   content: url(../images/path42.svg);
-  width: 27px;
+  width: 2.7rem;
   position: absolute;
   left: 0;
 }
@@ -188,7 +187,7 @@ blockquote p::before {
 }
 
 .p-blog-details-main__under-sns-links hr {
-  border-top: 0.5px solid;
+  border-top: 0.05rem solid;
   border-bottom: none;
 }
 
@@ -395,21 +394,31 @@ blockquote p::before {
   cursor: pointer;
 }
 .c-blog-article__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 6rem;
-  margin-bottom: 10rem;
+  margin-bottom: 9.4rem;
+  background-color: yellow;
 }
 
 .c-blog-article--prev-result {
+  width: 50%;
+  max-width: 34rem;
   margin-right: 2rem;
-  width: 34rem;
 }
 
 .c-blog-article--next-result {
-  width: 34rem;
+  width: 50%;
+  max-width: 34rem;
 }
 
 .c-blog-article--blog {
-  width: 26rem;
+  width: 50%;
+  max-width: 26rem;
 }
 
 .c-blog-article__name {
@@ -417,7 +426,7 @@ blockquote p::before {
   color: #fff;
   font-size: 1.7rem;
   line-height: 1.7647058824;
-  padding: 0.8rem 2rem;
+  padding: 0.3rem 2rem 0.2rem;
   margin-bottom: 1.6rem;
 }
 
@@ -2437,6 +2446,7 @@ blockquote p::before {
 
 .p-blog-details-main-related-articles__label {
   width: 100%;
+  height: 5rem;
   background-color: #000;
 }
 
@@ -2519,6 +2529,47 @@ blockquote p::before {
     line-height: 1.6470588235;
     text-align: left;
     margin-block: 0.9rem 0.4rem;
+  }
+}
+
+.blog-image {
+  width: 20rem;
+}
+@media only screen and (max-width: 767px) {
+  .blog-image {
+    width: 16rem;
+  }
+}
+
+.blog-image img {
+  aspect-ratio: 200/140;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 767px) {
+  .blog-image img {
+    aspect-ratio: 160/110;
+  }
+}
+
+.result-image {
+  width: 26rem;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .result-image {
+    width: 16rem;
+  }
+}
+
+.result-image img {
+  aspect-ratio: 260/183;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 767px) {
+  .result-image img {
+    aspect-ratio: 160/113;
   }
 }
 
