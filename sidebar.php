@@ -22,17 +22,17 @@
       <h3>ブログ内を検索</h3>
     </div>            
     <div class="p-sidebar-blog-search__wrap">              
-        <form action="search.html" method="GET" class="p-sidebar-blog-search__box">
-          <input type="text" name="query" class="p-sidebar-blog-search__input">
+      <form action="search.html" method="GET" class="p-sidebar-blog-search__box">
+        <input type="text" name="query" class="p-sidebar-blog-search__input">
+        <button type="submit" class="p-sidebar-blog__search-button">                   
           <div class="p-sidebar-blog-search__btn-bg">
-            <button type="submit" class="p-sidebar-blog__search-button">                   
               <picture>
-                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/icon-search-btn-sp.svg">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-search-btn.svg" class="search-icon" alt="検索">
-              </picture>
-            </button>
+                <source media="(max-width: 767px)" srcset="./images/icon-search-btn-sp.svg">
+                <img src="./images/icon-search-btn.svg" class="search-icon" alt="検索">
+              </picture>                    
           </div>
-        </form>             
+        </button>
+      </form>             
     </div>
   </div>   
 
