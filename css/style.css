@@ -394,6 +394,67 @@ blockquote p::before {
   display: block;
   cursor: pointer;
 }
+.c-blog-article__wrap {
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+}
+
+.c-blog-article--prev-result {
+  margin-right: 2rem;
+  width: 34rem;
+}
+
+.c-blog-article--next-result {
+  width: 34rem;
+}
+
+.c-blog-article--blog {
+  width: 26rem;
+}
+
+.c-blog-article__name {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 1.7647058824;
+  padding: 0.8rem 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.c-blog-article__name--left {
+  text-align: left;
+}
+
+.c-blog-article__name--right {
+  text-align: right;
+}
+
+.c-blog-article__item-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1.6rem;
+     -moz-column-gap: 1.6rem;
+          column-gap: 1.6rem;
+}
+
+.c-blog-article__image {
+  width: 9.8rem;
+}
+
+.c-blog-article__image img {
+  aspect-ratio: 98/68;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.c-blog-article__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5625;
+  text-align: left;
+}
+
 .c-section-title30 {
   margin: 0 auto;
   font-size: 3rem;
@@ -2274,16 +2335,13 @@ blockquote p::before {
 }
 
 .p-blog-details-main__articles {
-  margin-block: 5.5rem 9.2rem;
+  margin-block: 6rem 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-column-gap: 8rem;
-     -moz-column-gap: 8rem;
-          column-gap: 8rem;
 }
 @media only screen and (max-width: 767px) {
   .p-blog-details-main__articles {
@@ -2295,7 +2353,8 @@ blockquote p::before {
 }
 
 .p-blog-details-main__article {
-  width: 26rem;
+  width: 50%;
+  max-width: 26rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3248,6 +3307,9 @@ body::-ms-scrollbar-thumb:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-column-gap: 4rem;
      -moz-column-gap: 4rem;
           column-gap: 4rem;

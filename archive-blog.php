@@ -17,15 +17,6 @@
       <!-- パンくずリストのテンプレパーツを読み込み -->
       <?php get_template_part('template-parts/breadcrumbs'); ?>
 
-
-      <!-- <div class="c-breadcrumb-wrap">
-        <div class="c-breadcrumb">
-          <a href="index.html" class="c-breadcrumb__text c-breadcrumb__text--1-line">ホーム</a>
-          <p class="c-breadcrumb__text c-breadcrumb__text--1-line">&#62;</p>
-          <p class="c-breadcrumb__text c-breadcrumb__text--1-line">ブログ</p>
-        </div>
-      </div> -->
-
       <div class="p-blog__inner-blog-list l-inner">
         <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

@@ -49,6 +49,7 @@
 .p-result-details__table-area {
  padding-top: 5.5rem;
  display: flex;
+ justify-content: space-between;
  column-gap: 4rem;
  @include sp {
   padding-top: 2.1rem;

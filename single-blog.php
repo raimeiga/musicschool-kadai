@@ -77,6 +77,7 @@
 
         <!-- サイドバーのテンプレ読み込み -->
         <?php get_sidebar(); ?>
+        
       </div><!-- p-blog-details__inner l-innerの終わり -->
       <?php endwhile; ?>
     </main>

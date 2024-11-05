@@ -250,10 +250,10 @@ text-align: left;
 
 // -------前後の記事-------
 .p-blog-details-main__articles {
- margin-block: 5.5rem 9.2rem;
+ margin-block: 6rem 10rem;
  display: flex;
  justify-content: space-between;
- column-gap: 8rem;
+ 
  @include sp {
   margin-block: 4.7rem 6.3rem;
   column-gap: 2.2rem;
@@ -261,8 +261,8 @@ text-align: left;
 }
 
 .p-blog-details-main__article {
- width: 26rem;
- // height: 12rem;
+ width: 50%;
+ max-width: 26rem;
  display: flex;
  flex-direction: column;
  row-gap: 1.5rem;
