@@ -2040,7 +2040,7 @@ blockquote p::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-block: 6.8rem 15.8rem;
+  padding-block: 6.8rem 18.8rem;
 }
 @media only screen and (max-width: 767px) {
   .p-blog-details__inner {
@@ -2441,7 +2441,6 @@ blockquote p::before {
 
 .p-blog-details-main-related-articles {
   width: 100%;
-  padding-bottom: 3rem;
 }
 
 .p-blog-details-main-related-articles__label {
@@ -2520,7 +2519,7 @@ blockquote p::before {
   font-weight: 600;
   line-height: 1.25;
   text-align: left;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.2rem;
 }
 @media only screen and (max-width: 767px) {
   .p-blog-details-main-related-article__text p {
@@ -3297,7 +3296,7 @@ body::-ms-scrollbar-thumb:before {
 }
 
 .p-result-details__inner {
-  padding-top: 7rem;
+  padding-block: 7rem 15.8rem;
 }
 @media only screen and (max-width: 767px) {
   .p-result-details__inner {
