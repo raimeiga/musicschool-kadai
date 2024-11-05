@@ -27,8 +27,8 @@
         <button type="submit" class="p-sidebar-blog__search-button">                   
           <div class="p-sidebar-blog-search__btn-bg">
               <picture>
-                <source media="(max-width: 767px)" srcset="./images/icon-search-btn-sp.svg">
-                <img src="./images/icon-search-btn.svg" class="search-icon" alt="検索">
+                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/icon-search-btn-sp.svg">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-search-btn.svg" class="search-icon" alt="検索">
               </picture>                    
           </div>
         </button>
