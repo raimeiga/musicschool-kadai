@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <title>music_school</title>
+ <meta name="description" content="music_schoolの紹介">
+ <meta charset="UTF-8">
+
+ <!-- レスポンシブ対応 -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ <!-- 第三者閲覧防止のためのnoindexを記述 -->
+ <meta name="robots" content="noindex">
+
+ <!-- ファビコン設定 -->
+ <link rel="icon" href="images/favicon.ico">
+
+ <!-- リセットCSS -->
+ <link rel="stylesheet" href="css/reset.css">
+
+  <!-- slick（slick.css）読み込み -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <!-- Simplebar(css)読込 -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.css"/>
+
+ <!-- スタイルシート読み込みに、キャッシュ削除のクエリを追記　style.css更新時に、ver=1.0.2とかに変更していくらしい　-->
+ <link rel="stylesheet" type="text/css" href="css/style.css?ver=2.0.4"/>
+
+  <!-- Noto Sans JP フォントの読み込み -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- header -->
+    <header class="l-header">
+      <div class="p-header">
+        <div class="p-header__logo p-header-logo">
+          <a href="index.html">
+            <div class="p-header-logo__image">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./images/sp_logo-red20x31.svg">
+                <img src="./images/logo-red32x49.svg" alt="きたむらミュージックスクール">
+              </picture>
+            </div>
+            <div class="p-header-logo__text">
+              <h2>きたむら<br class="pc"><span>ミュージックスクール</span></h2>
+            </div>  
+          </a>   
+        </div>
+        <div class="p-header__right p-header-right">      
+          <!-- <div class="header__hb-btn header-hb__btn sp"> -->
+          <div class="c-hamburger  js-hamburger sp">
+            <div class="c-hamburger__inner">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+         
+          <div class="p-header__nav p-header-nav">
+            <ul class="p-header-nav__lists">
+              <li class="p-header-nav__list">
+               <a href="plan.html">料金</a>
+              </li>
+              <li class="p-header-nav__list">
+                <a href="blog_list.html">ブログ</a>
+              </li>
+              <li class="p-header-nav__list">
+                <a href="result_list.html">卒業実績</a>
+              </li>    
+            </ul>
+          </div>
+          <a href="contact_form.html" class="c-btn c-btn--header pc">お問い合わせ</a>
+        </div>
+      </div>
+    </header>
+   
+    <main>    
+      <!-- パンくずリスト -->
+      <div class="c-breadcrumb-wrap">
+        <div class="c-breadcrumb">
+          <a href="index.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines-result-details">ホーム</a>
+          <p class="c-breadcrumb__text c-breadcrumb__text--2-lines-result-details">&#62;</p>
+          <a href="result_list.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines-result-details">卒業実績</a>
+          <p class="c-breadcrumb__text c-breadcrumb__text--2-lines-result-details">&#62;</p>
+          <a href="result_details.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines-result-details">ポップス</a>
+          <p class="c-breadcrumb__text c-breadcrumb__text--2-lines-result-details">&#62;</p>
+          <p class="c-breadcrumb__text c-breadcrumb__text--result-details">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+        </div>
+      </div>
+     
+      <div class="p-result-details__inner l-inner">
+        <div class="p-result-details__image">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./images/result_details-mv-sp.jpg">
+            <img src="./images/result_details-mv.jpg" alt="ポップス">
+          </picture>
+          <p class="c-caption c-caption--w100">ポップス</p>      
+        </div>         
+        <h1 class="p-result-details__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
+        <time datetime="2024-10-01" class="p-result-details__date">2024.10.01</time>
+       
+        <div class="p-result-details__table-area">
+          <table class="p-result-details__table p-result-details-table">
+            <tbody>
+              <tr class="p-result-details-table__tr">
+                <td class="p-result-details-table__label-01">名前</td>
+                <td class="p-result-details-table__label-02">丸山</td>
+              </tr>
+              <tr class="p-result-details-table__tr">
+                <td class="p-result-details-table__label-01">職業</td>
+                <td class="p-result-details-table__label-02">証券会社勤務</td>
+              </tr>
+              <tr class="p-result-details-table__tr">
+                <td class="p-result-details-table__label-01">ジャンル</td>
+                <td class="p-result-details-table__label-02">入力欄</td>
+              </tr>
+              <tr class="p-result-details-table__tr">
+                <td class="p-result-details-table__label-01">実績</td>
+                <td class="p-result-details-table__label-02">入力欄</td>
+              </tr>
+              <tr class="p-result-details-table__tr">
+                <td class="p-result-details-table__label-01">SNS</td>
+                <td class="p-result-details-table__label-02">入力欄</td>
+              </tr>             
+            </tbody>
+          </table>
+          <p class="p-result-details__text">昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+        </div>
+        
+        <div class="p-result-details__articles-area">
+          <div class="p-result-details__articles">
+            <a href="result_details.html">
+              <div class="p-result-details__article p-result-details-article">
+                <p class="p-result-details-article__label-prev">◀︎ 前の記事</p>
+                <div class="p-result-details-article__img-and-title">
+                  <div class="p-result-details-article__image pc">
+                    <img src="./images/blog-details98.jpg" alt="前の記事" >
+                  </div>
+                  <p class="p-result-details-article__title">タイトルが入ります。タイトルが入ります。タイトルが入</p>
+                </div>
+              </div>
+            </a>
+            <a href="result_details.html">
+              <div class="p-result-details__article p-result-details-article">
+                <p class="p-result-details-article__label-next">次の記事 ▶︎</p>
+                <div class="p-result-details-article__img-and-title">
+                  <div class="p-result-details-article__image pc">
+                    <img src="./images/blog-details98.jpg" alt="次の記事">
+                  </div>
+                  <p class="p-result-details-article__title">タイトルが入ります。タイトルが入ります。タイトルが入</p>
+                </div>
+              </div>
+            </a>
+          </div>          
+
+          <div class="p-result-details__related-articles  p-result-details-related-articles">
+            <div class="p-result-details-related-articles__label">
+              <p>関連記事</p>
+            </div>
+            <a href="result_details.html">
+              <div class="p-result-details-related-article__list p-result-details-related-article-list">
+                <div class="p-result-details-related-article-list__image">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/result_details-01-sp.jpg">
+                    <img src="./images/result_details-01.jpg" alt="ロック">
+                  </picture>
+                  <p class="c-caption c-caption--w-pc100-sp80">ロック</p>                  
+                </div>
+                <div class="p-result-details-related-article-list__title-and-date">
+                  <p class="p-result-details-related-article-list__title">タイトルが入ります。タイトル</p>
+                  <time datetime="2024-10-01" class="p-result-details-related-article-list__date">2024.10.01</time>
+                </div>
+              </div>
+            </a>
+            <a href="result_details.html">
+              <div class="p-result-details-related-article__list p-result-details-related-article-list">
+                <div class="p-result-details-related-article-list__image">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/result_details-02-sp.jpg">
+                    <img src="./images/result_details-02.jpg" alt="ジャズ">
+                  </picture>
+                  <p class="c-caption c-caption--w-pc100-sp80">ジャズ</p>                  
+                </div>
+                <div class="p-result-details-related-article-list__title-and-date">
+                  <p class="p-result-details-related-article-list__title">タイトルが入ります。タイトル</p>
+                  <time datetime="2024-10-01" class="p-result-details-related-article-list__date">2024.10.01</time>
+                </div>
+              </div>
+            </a>
+            <a href="result_details.html">
+              <div class="p-result-details-related-article__list p-result-details-related-article-list">
+                <div class="p-result-details-related-article-list__image">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/result_details-03-sp.jpg">
+                    <img src="./images/result_details-03.jpg" alt="ラテン">
+                  </picture>
+                  <p class="c-caption c-caption--w-pc100-sp80">ラテン</p>                  
+                </div>
+                <div class="p-result-details-related-article-list__title-and-date">
+                  <p class="p-result-details-related-article-list__title">タイトルが入ります。タイトル</p>
+                  <time datetime="2024-10-01" class="p-result-details-related-article-list__date">2024.10.01</time>
+                </div>
+              </div>
+            </a> 
+          </div>
+        </div>
+      </div><!--p-result-details__innerの終わり -->
+    </main>
+    <footer>
+      <div class="p-footer__inner l-red-inner">
+        <nav class="p-footer__nav p-footer-nav">
+          <ul class="p-footer-nav__lists">
+            <li class="p-footer-nav__list"><a href="index.html">ホーム</a></li>
+            <li class="p-footer-nav__list"><a href="plan.html">料金</a></li>
+            <li class="p-footer-nav__list"><a href="blog_list.html">ブログ</a></li>
+            <li class="p-footer-nav__list"><a href="result_list.html">卒業実績</a></li>
+          </ul>           
+        </nav>
+        <div class="p-footer__logo">
+          <a href="index.html">
+            <img src="./images/logo-white.svg" alt="きたむらミュージックスクール">
+           </a>
+        </div>
+        <p class="p-footer__copyright">Copyright<span style="font-size: 1em;">©</span>0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
+        <div>
+          <ul class="p-footer__icon-wrap">
+            <li>
+              <a href="">
+                <img src="./images/icon-twitter.svg" alt="twitter">
+              </a>
+            </li>          
+            <li>
+              <a href="">
+                <img src="./images/icon-facebook.svg" alt="facebook">
+              </a>
+            </li> 
+            <li>
+              <a href="">
+                <img src="./images/icon-youtube.svg" alt="youtube">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/icon-instagram.svg" alt="instagram"> 
+              </a>
+            </li> 
+          </ul>       
+        </div>
+      </div>
+    </footer>            
+    
+    <a href="#" class="c-top-back-btn c-top-back-btn--91-79 u-scroll-show">
+      <div class="c-top-back-btn__icon">
+        <img src="./images/top-back-btn.svg" alt="top">
+      </div>
+    </a>
+    
+    <a href="contact_form.html" class="c-btn c-btn--fixed u-scroll-show">お問い合わせ</a>
+  </div><!-- wrapperの終わり -->
+
+  <!--jQueryの読み込み --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- slick読み込み -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+  <!-- Simplebar(js) 読込 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.js"></script>
+  
+  <!-- javascriptの読み込み -->
+  <script src="./js/main.js"> </script>
+</body>
+
+</html>
