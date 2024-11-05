@@ -1,80 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
- <title>music_school</title>
- <meta name="description" content="music_schoolの紹介">
- <meta charset="UTF-8">
-
- <!-- レスポンシブ対応 -->
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
- <!-- 第三者閲覧防止のためのnoindexを記述 -->
- <meta name="robots" content="noindex">
-
- <!-- ファビコン設定 -->
- <link rel="icon" href="images/favicon.ico">
-
- <!-- リセットCSS -->
- <link rel="stylesheet" href="css/reset.css">
-
-  <!-- slick（slick.css）読み込み -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
-  <!-- Simplebar(css)読込 -->
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.css"/>
-
- <!-- スタイルシート読み込みに、キャッシュ削除のクエリを追記　style.css更新時に、ver=1.0.2とかに変更していくらしい　-->
- <link rel="stylesheet" type="text/css" href="css/style.css?ver=2.0.4"/>
-
-   <!-- Noto Sans JP フォントの読み込み -->
-   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <div id="wrapper">
-  <!-- header -->
-    <header class="l-header">
-      <div class="p-header">
-        <div class="p-header__logo p-header-logo">
-          <a href="index.html">
-            <div class="p-header-logo__image">
-              <picture>
-                <source media="(max-width: 767px)" srcset="./images/sp_logo-red20x31.svg">
-                <img src="./images/logo-red32x49.svg" alt="きたむらミュージックスクール">
-              </picture>
-            </div>
-            <div class="p-header-logo__text">
-              <h2>きたむら<br class="pc"><span>ミュージックスクール</span></h2>
-            </div>  
-          </a>   
-        </div>
-        <div class="p-header__right p-header-right">      
-          <!-- <div class="header__hb-btn header-hb__btn sp"> -->
-          <div class="c-hamburger  js-hamburger sp">
-            <div class="c-hamburger__inner">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-         
-          <div class="p-header__nav p-header-nav">
-            <ul class="p-header-nav__lists">
-              <li class="p-header-nav__list">
-               <a href="plan.html">料金</a>
-              </li>
-              <li class="p-header-nav__list">
-                <a href="blog_list.html">ブログ</a>
-              </li>
-              <li class="p-header-nav__list">
-                <a href="result_list.html">卒業実績</a>
-              </li>    
-            </ul>
-          </div>
-          <a href="contact_form.html" class="c-btn c-btn--header pc">お問い合わせ</a>
-        </div>
-      </div>
-    </header>
+<!-- ヘッダーのテンプレパーツの読み込み -->
+<?php get_header(); ?>
    
     <main>
       <!-- メインビュー -->
@@ -99,282 +24,70 @@
       </div>
 
       <div class="p-blog__inner-blog-list l-inner">
+        <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = array(
+          'paged' => $paged,
+          'post_type' => 'blog',
+          'orderby' => 'date',
+          'order' => 'DESC'
+        );
+        $the_query = new WP_Query($args);
+        ?>
+
         <h2 class="c-section-title25" >ブログ一覧</h2>
         <div class="p-blog__lists-column">
-          <a href="blog_details.html">
-            <div class="p-blog__list-row p-blog-list">
+         <!-- 記事の取得 -->
+         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <a href="<?php the_permalink(); ?>" class="p-blog__list-row p-blog-list">
               <div class="p-blog-list__image-height-longer">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="./images/blog-list_01-sp.jpg">
-                  <img src="./images/blog-list_01.jpg" alt="アルペジオが劇的に向上する3つの習慣">
-                </picture>
+                <?php if (has_post_thumbnail()) {
+                   the_post_thumbnail('custom-size'); // 'custom-size'はカスタムサイズ
+                 }
+                ?>
               </div>
-              <p class="c-caption c-caption--w-pc80-sp90">ギター</p>
+              <p class="c-caption c-caption--w-pc80-sp90">
+                <?php if( has_term('', 'blog_tag', $post->ID) ): $post_term = get_the_terms($post->ID, 'blog_tag'); 
+                 echo $post_term[0]->name; endif; ?>
+              </p>
               <div class="p-blog-list__text">
-               <h3 class="p-blog-list__title-mb">アルペジオが劇的に向上する3つの習慣</h3>
-               <time datetime="2024-10-01" class="p-blog-list__time-side-change">2024.10.01</time>
-                <p class="p-blog-list__article">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。               
-                </p>
+               <h3 class="p-blog-list__title-mb"><?php the_title(); ?></h3>
+               <time datetime="the_time('Y-m-d')" class="p-blog-list__time-side-change"><?php the_time('Y.m.d'); ?></time>
+                <p class="p-blog-list__article"><?php echo get_the_excerpt(); ?></p>
               </div>
-            </div>
-          </a>
-          <a href="blog_details.html">
-            <div class="p-blog-list p-blog__list-row">
-              <div class="p-blog-list__image-height-longer">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="./images/blog-list_02-sp.jpg">
-                  <img src="./images/blog-list_02.jpg" alt="集客してる間は売れないという法則">
-                </picture>
-              </div>
-              <p class="c-caption c-caption--w-pc80-sp90">集客方法</p>
-              <div class="p-blog-list__text">
-                <h3 class="p-blog-list__title-mb">集客してる間は売れないという法則</h3>
-                <time datetime="2024-10-01" class="p-blog-list__time-side-change">2024.10.01</time>
-                <p class="p-blog-list__article">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                 </p>
-              </div>
-            </div>
-          </a>
-          <a href="blog_details.html">
-            <div class="p-blog-list p-blog__list-row">
-              <div class="p-blog-list__image-height-longer">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="./images/blog-list_03-sp.jpg">
-                  <img src="./images/blog-list_03.jpg" alt="フォロワーではなくファンを増やせとは？">
-                </picture>
-              </div>
-              <p class="c-caption c-caption--w-pc80-sp90">SNS</p>
-              <div class="p-blog-list__text">
-                <h3 class="p-blog-list__title-mb">フォロワーではなくファンを増やせとは？</h3>
-                <time datetime="2024-10-01" class="p-blog-list__time-side-change">2024.10.01</time>
-                <p class="p-blog-list__article">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                 </p>
-              </div>
-            </div>
-          </a>
-          <a href="blog_details.html">
-            <div class="p-blog-list p-blog__list-row">
-              <div class="p-blog-list__image-height-longer">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="./images/blog-list_01-sp.jpg">
-                  <img src="./images/blog-list_01.jpg" alt="アルペジオが劇的に向上する3つの習慣">
-                </picture>
-              </div>
-              <p class="c-caption c-caption--w-pc80-sp90">ギター</p>
-              <div class="p-blog-list__text">
-                <h3 class="p-blog-list__title-mb">アルペジオが劇的に向上する3つの習慣</h3>
-                <time datetime="2024-10-01" class="p-blog-list__time-side-change">2024.10.01</time>
-                <p class="p-blog-list__article">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                 </p>
-              </div>
-            </div>
-          </a>
-          <a href="blog_details.html">
-            <div class="p-blog-list p-blog__list-row">
-              <div class="p-blog-list__image-height-longer">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="./images/blog-list_02-sp.jpg">
-                  <img src="./images/blog-list_02.jpg" alt="集客してる間は売れないという法則">
-                </picture>
-              </div>
-              <p class="c-caption c-caption--w-pc80-sp90">集客方法</p>
-              <div class="p-blog-list__text">
-                <h3 class="p-blog-list__title-mb">集客してる間は売れないという法則</h3>
-                <time datetime="2024-10-01" class="p-blog-list__time-side-change">2024.10.01</time>
-                <p class="p-blog-list__article">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                 </p>
-              </div>
-            </div>
-          </a>
-          <a href="blog_details.html">
-            <div class="p-blog-list p-blog__list-row">
-              <div class="p-blog-list__image-height-longer">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="./images/blog-list_03-sp.jpg">
-                  <img src="./images/blog-list_03.jpg" alt="フォロワーではなくファンを増やせとは？">
-                </picture>
-              </div>
-              <p class="c-caption c-caption--w-pc80-sp90">SNS</p>
-              <div class="p-blog-list__text">
-                <h3 class="p-blog-list__title-mb">フォロワーではなくファンを増やせとは？</h3>
-                <time datetime="2024-10-01" class="p-blog-list__time-side-change">2024.10.01</time>
-                <p class="p-blog-list__article">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                 </p>
-              </div>
-            </div>
-          </a>
-          <a href="blog_details.html">
-            <div class="p-blog-list p-blog__list-row">
-              <div class="p-blog-list__image-height-longer">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="./images/blog-list_01-sp.jpg">
-                  <img src="./images/blog-list_01.jpg" alt="アルペジオが劇的に向上する3つの習慣">
-                </picture>
-              </div>
-              <p class="c-caption c-caption--w-pc80-sp90">ギター</p>
-              <div class="p-blog-list__text">
-                <h3 class="p-blog-list__title-mb">アルペジオが劇的に向上する3つの習慣</h3>
-                <time datetime="2024-10-01" class="p-blog-list__time-side-change">2024.10.01</time>
-                <p class="p-blog-list__article">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                 </p>
-              </div>
-            </div>
-          </a>
-          <a href="blog_details.html">
-            <div class="p-blog-list p-blog__list-row">
-              <div class="p-blog-list__image-height-longer">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="./images/blog-list_02-sp.jpg">
-                  <img src="./images/blog-list_02.jpg" alt="集客してる間は売れないという法則">
-                </picture>
-              </div>
-              <p class="c-caption c-caption--w-pc80-sp90">集客方法</p>
-              <div class="p-blog-list__text">
-                <h3 class="p-blog-list__title-mb">集客してる間は売れないという法則</h3>
-                <time datetime="2024-10-01" class="p-blog-list__time-side-change">2024.10.01</time>
-                <p class="p-blog-list__article">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                 </p>
-              </div>
-            </div>
-          </a>
-          <a href="blog_details.html">
-            <div class="p-blog-list p-blog__list-row">
-              <div class="p-blog-list__image-height-longer">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="./images/blog-list_03-sp.jpg">
-                  <img src="./images/blog-list_03.jpg" alt="フォロワーではなくファンを増やせとは？">
-                </picture>
-              </div>
-              <p class="c-caption c-caption--w-pc80-sp90">SNS</p>
-              <div class="p-blog-list__text">
-                <h3 class="p-blog-list__title-mb">フォロワーではなくファンを増やせとは？</h3>
-                <time datetime="2024-10-01" class="p-blog-list__time-side-change">2024.10.01</time>
-                <p class="p-blog-list__article">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                 </p>
-              </div>
-            </div>
-          </a>
-          <a href="blog_details.html">
-            <div class="p-blog-list p-blog__list-row">
-              <div class="p-blog-list__image-height-longer">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="./images/blog-list_01-sp.jpg">
-                  <img src="./images/blog-list_01.jpg" alt="アルペジオが劇的に向上する3つの習慣">
-                </picture>
-              </div>
-              <p class="c-caption c-caption--w-pc80-sp90">ギター</p>
-              <div class="p-blog-list__text">
-                <h3 class="p-blog-list__title-mb">アルペジオが劇的に向上する3つの習慣</h3>
-                <time datetime="2024-10-01" class="p-blog-list__time-side-change">2024.10.01</time>
-                <p class="p-blog-list__article">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                 </p>
-              </div>
-            </div>
-          </a>         
+            </a>
+          <?php endwhile; endif; ?>  
         </div>
-        <!-- ページネーション -->
-        <ul class="c-pagination">
+        <!-- ページネーション -->       
+        <div class="content-area content-area-blog-pager">
+          <div class="c-pager">
+          <?php
+          echo paginate_links(array(
+            'prev_next' => false,
+            'total' => $the_query->max_num_pages,
+            'current' => max( 1, get_query_var('paged') )
+          ));
+          ?>
+          </div>
+        </div>
+         <!-- <ul class="c-pagination">
          <li class="c-pagination__item c-pagination__item--active">1</li>
          <li class="c-pagination__item"><a href="#">2</a></li>
           <li class="c-pagination__item"><a href="#">3</a></li>
           <li class="c-pagination__item c-pagination__item--disabled"><span>…</span></li>
           <li class="c-pagination__item"><a href="#">9</a></li>
-        </ul>
+         </ul> -->
       </div>  
     </main>
 
-    <footer>
-      <div class="p-footer__inner l-red-inner">
-        <nav class="p-footer__nav p-footer-nav">
-          <ul class="p-footer-nav__lists">
-            <li class="p-footer-nav__list"><a href="index.html">ホーム</a></li>
-            <li class="p-footer-nav__list"><a href="plan.html">料金</a></li>
-            <li class="p-footer-nav__list"><a href="blog_list.html">ブログ</a></li>
-            <li class="p-footer-nav__list"><a href="result_list.html">卒業実績</a></li>
-          </ul>           
-        </nav>
-        <div class="p-footer__logo">
-          <a href="index.html">
-            <img src="./images/logo-white.svg" alt="きたむらミュージックスクール">
-           </a>
-        </div>
-        <p class="p-footer__copyright">Copyright<span style="font-size: 1em;">©</span>0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
-        <div>
-          <ul class="p-footer__icon-wrap">
-            <li>
-              <a href="">
-                <img src="./images/icon-twitter.svg" alt="twitter">
-              </a>
-            </li>          
-            <li>
-              <a href="">
-                <img src="./images/icon-facebook.svg" alt="facebook">
-              </a>
-            </li> 
-            <li>
-              <a href="">
-                <img src="./images/icon-youtube.svg" alt="youtube">
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="./images/icon-instagram.svg" alt="instagram"> 
-              </a>
-            </li> 
-          </ul>       
-        </div>
-      </div>
-    </footer>        
-    
+    <!-- トップに戻るボタン -->
     <a href="#" class="c-top-back-btn c-top-back-btn--91-79 u-scroll-show">
-      <div class="c-top-back-btn__icon">
-        <img src="./images/top-back-btn.svg" alt="top">
-      </div>
+     <div class="c-top-back-btn__icon">
+       <img src="<?php echo get_template_directory_uri(); ?>/images/top-back-btn.svg" alt="top">
+     </div>
     </a>
-    
-    <a href="contact_form.html" class="c-btn c-btn--fixed u-scroll-show">お問い合わせ</a>
-  </div>
-
-  <!--jQueryの読み込み --> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <!-- slick読み込み -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
-  <!-- Simplebar(js) 読込 -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.js"></script>
-  
-  <!-- javascriptの読み込み -->
-  <script src="./js/main.js"> </script>
-</body>
-
-</html>
+    <!-- 問い合わせボタン -->
+    <?php get_template_part('template-parts/contact-button'); ?>
+       
+    <!-- フッターのテンプレパーツの読み込み -->
+    <?php get_footer(); ?>
