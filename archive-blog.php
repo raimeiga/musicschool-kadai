@@ -15,10 +15,9 @@
         </div>  
       </div>    
       <!-- パンくずリスト -->
-      <div class="c-breadcrumb-wrap">
-        <div class="c-breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
-          <?php if(function_exists('bcn_display')) { bcn_display(); }?>        </div>
-        </div>
+      <?php get_template_part('template-parts/breadcrumbs'); ?>
+
+
       <!-- <div class="c-breadcrumb-wrap">
         <div class="c-breadcrumb">
           <a href="index.html" class="c-breadcrumb__text c-breadcrumb__text--1-line">ホーム</a>
