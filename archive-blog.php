@@ -58,25 +58,9 @@
             </a>
           <?php endwhile; endif; ?>  
         </div>
-        <!-- ページネーション -->       
-        <div class="content-area content-area-blog-pager">
-          <div class="c-pager">
-          <?php
-          echo paginate_links(array(
-            'prev_next' => false,
-            'total' => $the_query->max_num_pages,
-            'current' => max( 1, get_query_var('paged') )
-          ));
-          ?>
-          </div>
-        </div>
-         <!-- <ul class="c-pagination">
-         <li class="c-pagination__item c-pagination__item--active">1</li>
-         <li class="c-pagination__item"><a href="#">2</a></li>
-          <li class="c-pagination__item"><a href="#">3</a></li>
-          <li class="c-pagination__item c-pagination__item--disabled"><span>…</span></li>
-          <li class="c-pagination__item"><a href="#">9</a></li>
-         </ul> -->
+        <!-- ページャーのテンプレ読み込み --> 
+        <?php get_template_part('template-parts/pager', '', $the_query); ?>
+      
       </div>  
     </main>
 
