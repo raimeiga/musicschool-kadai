@@ -606,72 +606,38 @@ blockquote p::before {
   vertical-align: middle;
 }
 
-.c-pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  margin-inline: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.c-pager {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
-
-.c-pagination__item--active {
-  display: block;
-  width: 5rem;
-  height: 5rem;
-  padding-top: 1rem;
-  text-decoration: none;
-  background-color: #000;
-  color: #fff;
+.c-pager .page-numbers {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
   font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.6666666667;
-}
-
-.c-pagination__item {
-  margin-right: 1rem;
-}
-
-.c-pagination__item a {
-  display: block;
-  width: 5rem;
-  height: 5rem;
-  padding-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.8;
   text-decoration: none;
-  border: 0.1rem solid #000;
   color: #000;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.6666666667;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  border: 1px solid #000;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
-
-.c-pagination__item:last-of-type {
+.c-pager :last-child {
   margin-right: 0;
 }
-
-.c-pagination__item:hover a {
-  background-color: #000;
+.c-pager .current {
   color: #fff;
+  background: #000;
 }
-
-.c-pagination__item--disabled {
-  pointer-events: none;
-}
-
-.c-pagination__item span {
-  display: block;
-  width: 4rem;
-  height: 5rem;
-  padding-top: 1rem;
-  text-decoration: none;
-  color: #000;
+.c-pager .dots {
+  display: inline-block;
   font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.6666666667;
+  font-weight: bold;
+  margin-right: 10px;
+  border: none;
 }
 
 .c-caption {
