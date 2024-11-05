@@ -6,8 +6,8 @@
       <div class="p-mv">
         <div class="p-mv__image">
           <picture>
-            <source media="(max-width: 767px)" srcset="./images/blog-list-mv-sp.jpg">
-            <img src="./images/blog-list-mv.jpg" alt="ブログ">
+            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list-mv-sp.jpg">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-list-mv.jpg" alt="ブログ">
           </picture> 
         </div>
         <div class="p-mv__contents">
@@ -58,9 +58,8 @@
             </a>
           <?php endwhile; endif; ?>  
         </div>
-        <!-- ページャーのテンプレ読み込み --> 
+        <!-- ページャーのテンプレ読み込み -->
         <?php get_template_part('template-parts/pager', '', $the_query); ?>
-      
       </div>  
     </main>
 
