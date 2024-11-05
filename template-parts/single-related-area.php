@@ -20,7 +20,7 @@
     <?php if( $the_query->have_posts() ):
     while( $the_query->have_posts() ): $the_query->the_post(); ?> 
       <a href="<?php echo get_permalink($post->ID); ?>" class="p-blog-details-main-related-article__list">
-        <div class="p-blog-details-main-related-article__image">
+      <div class="p-blog-details-main-related-article__image <?php echo ($args['post_type'] === 'result') ? 'result-image' : 'blog-image'; ?>">
           <?php
           $thumbnail_id = get_post_thumbnail_id($post->ID);
           $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
