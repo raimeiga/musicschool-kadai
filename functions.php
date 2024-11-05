@@ -37,3 +37,10 @@ add_action('wp_enqueue_scripts', 'custom_theme_footer_scripts');
 
 //サムネイル有効化
 add_theme_support('post-thumbnails');
+
+//現在のページ数の取得
+function show_page_number() {
+ global $wp_query;
+ $paged = get_query_var('paged');
+ echo $paged;
+}
