@@ -570,9 +570,9 @@ blockquote p::before {
 }
 
 .c-breadcrumb {
-  max-width: 108rem;
+  max-width: 88rem;
   width: 100%;
-  padding-inline: 10rem;
+  margin: 0 auto;
   padding-block: 9px 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -582,7 +582,6 @@ blockquote p::before {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 auto;
   color: #000;
   font-size: 1.6rem;
   line-height: 2.0625;
