@@ -1,5 +1,11 @@
 $(function() {
  
+ // 検証ツールでヘッダーを見て、問い合わせボタンのid（menu-item-172）を確認し、
+ // それに、静的サイトでつくったスタイル（c-btn c-btn--header pc）を加える措置
+ // イベントにするというより、$(function() {の真下に書けば、読み込みと同時に発火し、
+ //  スタイルが追加されるって仕組み。
+ $('#menu-item-172').addClass('c-btn c-btn--header pc');
+
  // ハンバーガー
  $('.c-hamburger').click(function(){
    $(this).toggleClass('active')

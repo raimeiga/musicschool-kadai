@@ -51,3 +51,11 @@ function remove_menus () {
  remove_menu_page( 'edit.php' );
 }
 add_action('admin_menu', 'remove_menus');
+
+
+//管理画面「外観＞メニュー」 を表示
+//「WordPressでメニューを有効化する」という意味らしい
+add_action('after_setup_theme', 'register_menu');
+function register_menu() {
+  register_nav_menu('primary', __('Primary Menu', 'theme-slug'));
+}
