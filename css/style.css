@@ -566,91 +566,30 @@ blockquote p::before {
 }
 
 .c-breadcrumb-wrap {
-  background: #e8e8e8;
-}
-
-.c-breadcrumb {
-  max-width: 88rem;
   width: 100%;
   background: #e8e8e8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 2rem;
-     -moz-column-gap: 2rem;
-          column-gap: 2rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 auto;
+  padding: 0.73rem 2rem 0.7rem;
 }
+
 @media only screen and (max-width: 767px) {
   .c-breadcrumb {
-    width: 100%;
-    padding-inline: 2rem;
+    line-height: 1.2;
   }
+}
+
+.c-breadcrumbs-sign {
+  padding-inline: 2rem;
+}
+
+.c-breadcrumb-wrap .c-breadcrumb .post.post-result.current-item {
+  display: inline-block;
 }
 
 .c-breadcrumb a {
+  display: inline-block;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
-}
-
-.c-breadcrumb a:hover {
-  opacity: 0.5;
-}
-
-.c-breadcrumb__text {
-  color: #000;
-  font-size: 1.6rem;
-  line-height: 2.0625;
-}
-
-.c-breadcrumb__text--1-line {
-  padding-block: 0.9rem 0.8rem;
-}
-@media only screen and (max-width: 767px) {
-  .c-breadcrumb__text--1-line {
-    padding-block: 0.3rem 0rem;
-  }
-}
-
-.c-breadcrumb__text--2-lines {
-  padding-block: 1.8rem 1.6rem;
-  line-height: 1;
-}
-@media only screen and (max-width: 767px) {
-  .c-breadcrumb__text--2-lines {
-    padding-block: 1.1rem 0.6rem;
-    line-height: 1;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .c-breadcrumb__text--blog-details {
-    padding-block: 0.5rem 0.7rem;
-    line-height: 1;
-  }
-}
-
-.c-breadcrumb__text--2-lines-result-details {
-  padding-block: 1.8rem 1.6rem;
-  line-height: 1;
-}
-@media only screen and (max-width: 767px) {
-  .c-breadcrumb__text--2-lines-result-details {
-    padding-block: 0.9rem 0;
-    line-height: 1;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .c-breadcrumb__text--result-details {
-    padding-block: 0.4rem 0.2rem;
-    line-height: 1.5;
-  }
+  padding: 0;
 }
 
 .c-circle {
