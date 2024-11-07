@@ -45,20 +45,15 @@
           </div>
          
           <div class="p-header__nav p-header-nav">
-            <ul class="p-header-nav__lists">
-              <li class="p-header-nav__list">
-                <a href="<?php echo get_template_directory_uri(); ?>/plan.html">料金</a>
-              </li>
-              <li class="p-header-nav__list">
-                <a href="<?php echo get_template_directory_uri(); ?>/blog_list.html">ブログ</a>
-              </li>
-              <li class="p-header-nav__list">
-                <a href="<?php echo get_template_directory_uri(); ?>/result_list.html">卒業実績</a>
-              </li>    
-            </ul>
-          </div>
-          <a href="<?php echo get_template_directory_uri(); ?>/contact_form.html" class="c-btn c-btn--header pc">お問い合わせ</a>
+          <?php
+           wp_nav_menu(array(
+           'menu' => 'header',
+           'menu_class' => 'header-nav-list',
+           'container' => 'nav',
+           'container_class' => 'header-nav'
+           ));
+           ?>
+          </div>          
         </div>
-      </div>
       <?php wp_head(); ?>
     </header>
