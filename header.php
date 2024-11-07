@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body style="display: none;">
   <div id="wrapper">
     <!-- header -->
     <header class="l-header">
