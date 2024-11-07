@@ -3,7 +3,6 @@
 // @use '../../foundation/base' as *;
 
 
-
 .p-header-nav {
  background-color: yellow;
  
@@ -37,7 +36,7 @@
   background-color: aqua; 
   height: 8rem;  
   display: flex;
-  align-items: center;   
+  align-items: center;
   
   font-size: 1.7rem;
   font-weight: 600;
@@ -54,6 +53,36 @@
     color: #fff;         
   }
  }
+ .header-nav-list li:not(:nth-child(4)) a:hover {
+  @include pc {
+   opacity: 0.5;
+  }
+  @include sp {
+   background-color: #000;   
+  }  
+ }
+
+
+ .header-nav-list li:not(:nth-child(4)) a::before {
+  @include pc { //spのナビメニューにも下線が走ってしまうのでpcに限定する
+    content: '';
+    width: 100%;
+    height: hvw(2);
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: hvw(25);
+    transform: scaleX(0);
+    transition: transform .4s;
+    transform-origin: left center; 
+    // ↑ leftは横の変形起点（左から右に動く）
+    //   centerは縦の変形起点（だけど今回はなくても動く）
+  }
+ }
+   
+ .header-nav-list li:not(:nth-child(4)) a:hover::before {
+   transform: scaleX(1);
+ } 
 
  .header-nav-list li:nth-child(4) {
   margin-block: 17.5px; 
