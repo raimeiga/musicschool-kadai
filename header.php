@@ -15,8 +15,7 @@
  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
 
 </head>
-
-<body style="display: none;">
+<body style="display: none;"><!-- ヘッダー遅延・ヘッダーナビメニューの表示崩れ防止　 -->
   <div id="wrapper">
     <!-- header -->
     <header class="l-header">
