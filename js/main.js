@@ -9,12 +9,12 @@ $(function() {
  // ハンバーガー
  $('.c-hamburger').click(function(){
    $(this).toggleClass('active')
-   $('.p-header-nav').toggleClass('active')
+   $('.header-nav').toggleClass('active')
  })
 
  $('.header__nav ul li a').click(function(){
    $('.c-hamburger').removeClass('active')
-   $('.p-header-nav').removeClass('active')
+   $('.header-nav').removeClass('active')
  });
  
  // FVのスライダー
