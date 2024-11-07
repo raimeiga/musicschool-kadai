@@ -59,3 +59,24 @@ add_action('after_setup_theme', 'register_menu');
 function register_menu() {
   register_nav_menu('primary', __('Primary Menu', 'theme-slug'));
 }
+
+//トップページ「生徒さんたちの声」のスライドの左右にある矢印を取得
+// prevArrow,nextArrowの2行とコンビ
+function enqueue_slider_scripts() {
+ // スライダーのJavaScriptファイルを読み込む
+ wp_enqueue_script('slick-slider', get_template_directory_uri() . '/path/to/slick.js', array('jquery'), null, true);
+
+ // スライダーの矢印画像パスをJavaScriptに渡す
+ $arrow_prev_path = get_template_directory_uri() . '/images/arrow-prev.svg';
+ $arrow_next_path = get_template_directory_uri() . '/images/arrow-next.svg';
+ $arrow_prev_path_sp = get_template_directory_uri() . '/images/arrow-prev-sp.svg';
+ $arrow_next_path_sp = get_template_directory_uri() . '/images/arrow-next-sp.svg';
+
+ wp_add_inline_script('slick-slider', "
+     var arrowPrevPath = '{$arrow_prev_path}';
+     var arrowNextPath = '{$arrow_next_path}';
+     var arrowPrevPathSp = '{$arrow_prev_path_sp}';
+     var arrowNextPathSp = '{$arrow_next_path_sp}';
+ ");
+}
+add_action('wp_enqueue_scripts', 'enqueue_slider_scripts');
