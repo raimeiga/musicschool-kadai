@@ -11,9 +11,9 @@
         ?>       
        <!-- </nav> -->
        <div class="p-footer__logo">
-         <a href="<?php echo get_template_directory_uri(); ?>/index.html">
+         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-white.svg" alt="きたむらミュージックスクール">
-          </a>
+         </a>
        </div>
        <p class="p-footer__copyright">Copyright<span style="font-size: 1em;">©</span>0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
        <div>

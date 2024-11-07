@@ -22,7 +22,7 @@
     <header class="l-header">
       <div class="p-header">
         <div class="p-header__logo p-header-logo">
-          <a href="<?php echo get_template_directory_uri(); ?>/index.html">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <div class="p-header-logo__image">
               <picture>
                 <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/sp_logo-red20x31.svg">
