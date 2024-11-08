@@ -114,57 +114,44 @@
 
      <section class="voice l-red-inner">
        <div class="p-voice__inner">
-         <h2 class="c-section-title30">生徒さんたちの声</h2>         
-           <div class="p-voice__lists js-slider">
-             <a href="<?php echo get_template_directory_uri(); ?>/result_details.html">
-               <div class="p-voice__list p-voice-list">
-                 <div class="p-voice-list__image">
-                   <picture>
-                     <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice01-sp.jpg">
-                     <img src="<?php echo get_template_directory_uri(); ?>/images/voice01.jpg" alt="証券会社勤務　丸山さん">
-                   </picture>
-                 </div>
-                 <p class="p-voice-list__name p-voice-list__name--my">証券会社勤務　丸山さん</p>
-                 <p class="p-voice-list__text">昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+         <h2 class="c-section-title30">生徒さんたちの声</h2>      
+         <?php
+         $args = array(
+             'posts_per_page' => 6,
+             'post_type' => 'result',
+             'orderby' => 'date',
+             'order' => 'DESC'
+         );
+         $the_query = new WP_Query($args);
+         ?>   
+         <div class="p-voice__lists js-slider">
+           <?php if($the_query->have_posts()) :
+           while($the_query->have_posts()) : $the_query->the_post(); ?>
+           <a href="<?php echo get_permalink($post->ID); ?>" >
+             <div class="p-voice__list p-voice-list">
+               <div class="p-voice-list__image">
+                 <?php
+                 $thumbnail_id = get_post_thumbnail_id($post->ID);
+                 $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
+                 if (get_post_thumbnail_id($post->ID)):
+                 ?>
+                 <img src="<?php echo $thumb_url[0] ?>" alt="">
+                 <?php endif; ?>
                </div>
-             </a>
-             <a href="<?php echo get_template_directory_uri(); ?>/result_details.html">
-               <div class="p-voice__list p-voice-list">
-                 <div class="p-voice-list__image">
-                   <picture>
-                     <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice02.jpg">
-                     <img src="<?php echo get_template_directory_uri(); ?>/images/voice02.jpg" alt="IT会社勤務　S.Eさん">
-                   </picture> 
-                 </div>        
-                 <p class="p-voice-list__name">IT会社勤務　S.Eさん</p>
-                 <p class="p-voice-list__text">プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>                 
-               </div>
-             </a>
-             <a href="<?php echo get_template_directory_uri(); ?>/result_details.html">
-               <div class="p-voice__list p-voice-list">
-                 <div class="p-voice-list__image">
-                   <picture>
-                     <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice03.jpg">
-                     <img src="<?php echo get_template_directory_uri(); ?>/images/voice03.jpg" alt="都内大学生　田森さん">
-                   </picture>    
-                 </div>     
-                 <p class="p-voice-list__name">都内大学生　田森さん</p>
-                 <p class="p-voice-list__text">就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>                 
-               </div>
-             </a>
-             <a href="<?php echo get_template_directory_uri(); ?>/result_details.html">
-               <div class="p-voice__list p-voice-list">
-                 <div class="p-voice-list__image">
-                   <picture>
-                     <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/voice01-sp.jpg">
-                     <img src="<?php echo get_template_directory_uri(); ?>/images/voice01.jpg" alt="証券会社勤務　丸山さん">
-                   </picture>
-                  </div> 
-                   <p class="p-voice-list__name">証券会社勤務　丸山さん</p>
-                   <p class="p-voice-list__text">昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
-                </div>               
-             </a>         
-           </div>        
+               <p class="p-voice-list__name p-voice-list__name--my">
+                 <?php echo get_post_meta(get_the_ID(), '職業', true); ?>
+                 <?php echo get_post_meta(get_the_ID(), '名前', true); ?>さん
+               </p>
+               <p class="p-voice-list__text">
+                 <?php if(mb_strlen(get_the_excerpt())>26) 
+                 {$title= mb_substr(get_the_excerpt(),0,26); echo $title . '...';} 
+                 else {echo mb_substr(get_the_excerpt(),0,26);} ?>               
+               </p>
+             </div>
+           </a>
+           <?php endwhile; ?>
+           <?php endif; ?>
+         </div>        
        </div>
      </section>          
 
@@ -262,47 +249,54 @@
        <div class="p-blog__inner l-inner">
          <h2 class="c-section-title30">ブログ</h2>
          <div class="p-blog__lists">
-           <a href="<?php echo get_template_directory_uri(); ?>/blog_details.html">
-             <div class="p-blog__list p-blog-list">
-               <div class="p-blog-list__image">
-                 <picture>
-                   <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-01-sp.jpg">
-                   <img src="<?php echo get_template_directory_uri(); ?>/images/blog-01.jpg" alt="フォロワーではなくファンを増やせとは？">
-                 </picture>
-               </div>
-               <p class="c-caption c-caption--w-pc80-sp90">SNS</p>
-               <p class="p-blog-list__title">フォロワーではなくファンを増やせとは？</p>
-               <time datetime="2024-10-01" class="p-blog-list__time">2024.10.01</time>
+         <?php
+           $args = array(
+             'posts_per_page' => 3,
+             'post_type' => 'blog',
+             'taxonomy' => 'blog_recommend',
+             'term' => 'on',
+             'orderby' => 'date',
+             'order' => 'DESC'
+           );
+           $the_query = new WP_Query($args);
+           ?>
+           <?php if($the_query->have_posts()) :
+           while($the_query->have_posts()) : $the_query->the_post(); ?>
+           <a href="<?php echo get_permalink($post->ID); ?>" class="p-blog__list p-blog-list">            
+             <div class="p-blog-list__image">
+               <?php
+               $thumbnail_id = get_post_thumbnail_id($post->ID);
+               $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
+               if (get_post_thumbnail_id($post->ID)) :
+               ?>
+                 <img src="<?php echo $thumb_url[0]; ?>" alt="">
+               <?php endif; ?>
              </div>
+             <p class="c-caption c-caption--w-pc80-sp90">
+               <?php
+               $terms = get_the_terms($post->ID, 'blog_tag');
+               foreach ($terms as $term) :
+                 echo $term->name;
+               endforeach;
+               ?>
+             </p>
+             <p class="p-blog-list__title">
+               <?php if(!is_mobile()):
+                 if(mb_strlen($post->post_title)>19) {
+                 $title= mb_substr($post->post_title,0,19); echo $title . '...';} else {
+                 echo $post->post_title;}
+               else:
+                 if(mb_strlen($post->post_title)>35) {
+                 $title= mb_substr($post->post_title,0,35); echo $title . '...';} else {
+                 echo $post->post_title;}
+               endif; ?>
+             </p>
+             <time datetime="the_time('Y-m-d')" class="p-blog-list__time"><?php the_time('Y.m.d') ?></time>
            </a>
-           <a href="<?php echo get_template_directory_uri(); ?>/blog_details.html">
-             <div class="p-blog__list p-blog-list">
-               <div class="p-blog-list__image">
-                 <picture>
-                   <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-02-sp.jpg">
-                   <img src="<?php echo get_template_directory_uri(); ?>/images/blog-02.jpg" alt="集客してる間は売れないという法則">
-                 </picture>
-               </div>
-               <p class="c-caption c-caption--w-pc80-sp90">集客方法</p>
-               <p class="p-blog-list__title">集客してる間は売れないという法則</p>
-               <time datetime="2024-10-01" class="p-blog-list__time">2024.10.01</time>
-             </div>
-           </a>
-           <a href="<?php echo get_template_directory_uri(); ?>/blog_details.html">
-             <div class="p-blog__list p-blog-list">
-               <div class="p-blog-list__image">
-                 <picture>
-                   <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-03-sp.jpg">
-                   <img src="<?php echo get_template_directory_uri(); ?>/images/blog-03.jpg" alt="アルペジオが劇的に向上する3つの習">
-                 </picture>
-               </div>
-               <p class="c-caption c-caption--w-pc80-sp90">ギター</p>
-               <p class="p-blog-list__title">アルペジオが劇的に向上する3つの習慣</p>
-               <time datetime="2024-10-01" class="p-blog-list__time">2024.10.01</time>
-             </div>
-           </a>
+           <?php endwhile; ?>
+           <?php endif; ?>
          </div>
-         <a href="<?php echo get_template_directory_uri(); ?>/blog_list.html" class="p-blog__link">ブログ一覧へ</a>
+         <a href="<?php echo esc_url( home_url( '/blog' ) ); ?>" class="p-blog__link">ブログ一覧へ</a>
        </div>
      </section>
     </main>
