@@ -103,3 +103,5 @@ function is_mobile(){
  $pattern = '/'.implode('|', $useragents).'/i';
  return preg_match($pattern, $_SERVER['HTTP_USER_AGENT']);
 }
+
+

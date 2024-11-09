@@ -3747,50 +3747,21 @@ body::-ms-scrollbar-thumb:before {
   }
 }
 
-.p-contact__checkboxes {
+.wpcf7-form-control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 0.9rem;
-  padding-bottom: 2.7rem;
-}
-@media only screen and (max-width: 767px) {
-  .p-contact__checkboxes {
-    padding-bottom: 0.9rem;
-  }
 }
 
-.p-contact__checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+.wpcf7-form-control-wrap .wpcf7-list-item label {
+  display: inline-block;
 }
 
-.p-contact__checkbox input[type=checkbox] + span {
-  font-size: 1.8rem;
-  line-height: 1.6666666667;
-  position: relative;
-  padding-left: 4rem;
-}
-@media only screen and (max-width: 767px) {
-  .p-contact__checkbox input[type=checkbox] + span {
-    font-size: 1.6rem;
-    line-height: 1.875;
-    padding-left: 3rem;
-  }
-}
-
-.p-contact__checkbox input[type=checkbox] + span::before {
+.wpcf7-form-control-wrap .wpcf7-list-item label::before {
   content: "";
   width: 2rem;
   height: 2rem;
@@ -3804,7 +3775,7 @@ body::-ms-scrollbar-thumb:before {
   z-index: 9;
 }
 
-.p-contact__checkbox input[type=checkbox] + span::after {
+.wpcf7-list-item label::after {
   content: "";
   width: 1.7rem;
   height: 0.9rem;
@@ -3819,7 +3790,7 @@ body::-ms-scrollbar-thumb:before {
   z-index: 10;
 }
 
-.p-contact__checkbox input[type=checkbox]:checked + span::after {
+.wpcf7-list-item label:checked::after {
   display: block;
 }
 
