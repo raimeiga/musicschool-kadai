@@ -1,0 +1,1 @@
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>contact" class="c-btn c-btn--fixed u-scroll-show">お問い合わせ</a>

@@ -1,0 +1,61 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+
+.p-sidebar-mail {
+ border: 0.05rem solid #000;
+ @include sp {
+   height: 31.8rem;
+ }
+} 
+
+.p-sidebar-mail__banner {
+ background-color: #E8E8E8;
+ width: 22rem; 
+ margin: 1.5rem;
+ display: grid;         
+ place-content: center; 
+ position: relative;
+ transition: opacity .4s;
+ @include sp {
+  width: 29.5rem;  
+  margin: 2rem;
+ }
+}
+
+
+
+.p-sidebar-mail__banner-image {
+  width: 100%;
+  height: auto;
+  @include sp {
+    width: 100%;    
+  }
+}
+
+// .p-sidebar-mail__banner-image img {
+//   width: 100%;
+//   height: auto;
+// }
+
+.p-sidebar-mail__banner p {
+  position: absolute;
+  top: 8.5rem;
+  left: 2rem;
+  transform: translate(50%,-50%);
+  color: #000;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: calc(33 / 18); 
+  @include sp {
+    position: absolute;
+    top: 11.5rem;
+    left: 5.6rem;
+    transform: translate(50%,-50%);
+  }
+}
+
+.p-sidebar-mail__banner:hover{
+ opacity: 0.5;
+}

@@ -1,0 +1,67 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.c-blog-article__wrap {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 6rem;
+ margin-bottom: 9.4rem;
+ background-color: yellow;
+}
+
+.c-blog-article--prev-result {
+ width: 50%;
+ max-width: 34rem; 
+ margin-right: 2rem;  
+ // width: 34rem; 
+}
+
+.c-blog-article--next-result {
+ width: 50%;
+ max-width: 34rem; 
+ // width: 34rem; 
+}
+
+.c-blog-article--blog {
+ width: 50%;
+ max-width: 26rem; 
+ // width: 26rem; 
+}
+.c-blog-article__name {
+ background-color: #000;
+ color: #fff;
+ font-size: 1.7rem;
+ line-height: calc(30 / 17);
+ // padding: 3px 20px 2px;
+ padding: 0.3rem 2rem 0.2rem;
+ margin-bottom: 1.6rem;
+}
+
+.c-blog-article__name--left {
+ text-align: left;
+}
+
+.c-blog-article__name--right {
+ text-align: right;
+}
+
+.c-blog-article__item-box {
+ display: flex;
+ column-gap: 1.6rem;
+}
+
+.c-blog-article__image {
+ width: 9.8rem;
+}
+
+.c-blog-article__image img {
+ aspect-ratio: 98 / 68;
+ object-fit: cover;
+}
+
+.c-blog-article__title { 
+ font-size: 1.6rem;
+ font-weight: 600;
+ line-height: calc(25 / 16);
+ text-align: left;
+}
