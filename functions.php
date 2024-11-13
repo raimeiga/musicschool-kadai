@@ -20,7 +20,7 @@ add_action('wp_enqueue_scripts', 'custom_theme_scripts');
 
 function custom_theme_footer_scripts() {
     // jQueryを読み込む
-    wp_deregister_script('jquery'); // 既存のjQueryを解除
+    // wp_deregister_script('jquery'); // 既存のjQueryを解除
     wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), null, true); // jQueryを追加
 
     // slickのJavaScript
@@ -30,7 +30,7 @@ function custom_theme_footer_scripts() {
     wp_enqueue_script('simplebar-js', 'https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.js', array('jquery'), null, true);
 
     // 自作のJavaScriptファイル
-    wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js', array('slick-js', 'simplebar-js'), null, true);
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js', array('slick-js', 'simplebar-js','jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'custom_theme_footer_scripts');
 
