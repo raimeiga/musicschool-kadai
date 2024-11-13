@@ -64,7 +64,7 @@ function register_menu() {
 // prevArrow,nextArrowの2行とコンビ
 function enqueue_slider_scripts() {
  // スライダーのJavaScriptファイルを読み込む
- wp_enqueue_script('slick-slider', get_template_directory_uri() . '/path/to/slick.js', array('jquery'), null, true);
+ wp_enqueue_script('slick-slider', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
 
  // スライダーの矢印画像パスをJavaScriptに渡す
  $arrow_prev_path = get_template_directory_uri() . '/images/arrow-prev.svg';
