@@ -55,11 +55,6 @@ a {
     display: none !important;
   }
 }
-#wpadminbar {
-  top: auto !important;
-  bottom: 20rem !important;
-}
-
 /*------------------------------------------------
  l-header
 -------------------------------------------------*/
