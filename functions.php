@@ -20,7 +20,7 @@ add_action('wp_enqueue_scripts', 'custom_theme_scripts');
 
 function custom_theme_footer_scripts() {
     // jQueryを読み込む
-    // wp_deregister_script('jquery'); // 既存のjQueryを解除
+    wp_deregister_script('jquery'); // 既存のjQueryを解除
     wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), null, true); // jQueryを追加
 
     // slickのJavaScript

@@ -76,7 +76,7 @@ jQuery(function($) {
  });
 
  // SimpleBarの初期化
- const remToPx = (rem) => rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+ // const remToPx = (rem) => rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
  const tableWrap = document.querySelector('.p-plan__table-wrap');
  if (tableWrap) {
    new SimpleBar(tableWrap, {
