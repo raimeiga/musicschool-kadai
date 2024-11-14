@@ -43,6 +43,7 @@ body {
   }
 }
 
+
 #wrapper {
  position: relative;
   // overflow: hidden;
@@ -85,7 +86,31 @@ a {
   }
 }
 
-// #wpadminbar {
-//  top: auto !important;
-//  bottom: 20rem !important;
+
+#wpadminbar {
+ position: fixed !important;  /* 管理バーを固定 */
+ bottom: 0 !important;        /* 最下部に配置 */
+}
+
+#wpadminbar .ab-item {
+ position: relative;  /* 親要素に位置指定を追加 */
+}
+
+#wpadminbar .ab-sub-wrapper {
+ position: absolute;    /* サブメニューの位置を絶対配置 */
+ // top: -100% !important;  /* 親メニューの上にサブメニューを配置 */
+ left: 0;
+ bottom: 30px;
+ background-color: #1d2327;
+}
+
+
+// .image-container, .video-container, .canvas-container {
+//  overflow: hidden;
+//  position: relative;  /* 必要に応じて */
+// }
+
+// img, video, canvas {
+//  width: 100%;  /* 必要に応じて調整 */
+//  height: auto; /* 必要に応じて調整 */
 // }

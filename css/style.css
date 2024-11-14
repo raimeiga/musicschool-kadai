@@ -55,6 +55,22 @@ a {
     display: none !important;
   }
 }
+#wpadminbar {
+  position: fixed !important; /* 管理バーを固定 */
+  bottom: 0 !important; /* 最下部に配置 */
+}
+
+#wpadminbar .ab-item {
+  position: relative; /* 親要素に位置指定を追加 */
+}
+
+#wpadminbar .ab-sub-wrapper {
+  position: absolute; /* サブメニューの位置を絶対配置 */
+  left: 0;
+  bottom: 30px;
+  background-color: #1d2327;
+}
+
 /*------------------------------------------------
  l-header
 -------------------------------------------------*/
@@ -729,6 +745,7 @@ blockquote p::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: yellow;
 }
 @media only screen and (max-width: 767px) {
   .p-header {
@@ -1313,13 +1330,13 @@ blockquote p::before {
 
 .p-voice__inner {
   max-width: 108rem;
-  padding-block: 6.4rem 5.7rem;
+  padding-block: 6.4rem 8.7rem;
   margin: 0 auto;
 }
 @media only screen and (max-width: 767px) {
   .p-voice__inner {
     width: 33.5rem;
-    padding-block: 4.8rem 5rem;
+    padding-block: 4.8rem 8rem;
   }
 }
 
