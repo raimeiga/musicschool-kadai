@@ -667,7 +667,7 @@ blockquote p::before {
 }
 
 @media only screen and (max-width: 767px) {
-  .home .c-breadcrumbs > span {
+  .homec-breadcrumbs > span {
     font-size: 1.6rem;
     line-height: 2.0625;
     padding-inline: 2rem;
@@ -2206,7 +2206,7 @@ blockquote p::before {
   font-size: 1.8rem;
   line-height: 1.6666666667;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 @media only screen and (max-width: 767px) {
   .p-blog-details-main__01-text {

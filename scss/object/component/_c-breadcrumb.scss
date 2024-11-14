@@ -1,52 +1,89 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
+
+
+
+
+
 .c-breadcrumb-wrap {
  background: #e8e8e8; 
+ @include sp {
+  font-size: 1.6rem;
+  line-height: calc(33 / 16);
+}
 }
 
 .c-breadcrumb {
  max-width: 88rem;
  width: 100%;
- margin: 0 auto;  
- padding-block: 9px 8px;
- display: flex;
- align-items: center;
- flex-wrap: wrap; 
-
- color: #000;
- font-size: 1.6rem; 
- line-height: calc(33 / 16);
  @include sp {
-  max-width: none;
-  width: 100%;
-  padding-inline: 2rem;
-  // padding-block: 9px 8px;
-  padding-block: 0.9rem 0.7rem;
-  line-height: calc(20 / 16);
+   max-width: none;
+   width: 100%;
+   padding-inline: 2rem;
  }
 }
 
-// Breadcrumb NavXTの設定の「パンくずの区切り」
-// に、pタグを書いてる（notionに書いといた）
-// pタグ
-.c-breadcrumbs-sign { 
- // padding-block: 0px 1px;
- padding-block: 0 0.1rem;
- padding-inline: 2rem; 
+.c-breadcrumb > span {
+ padding-inline: 0 2rem;
 }
 
-.c-breadcrumb span {
- display: inline-block;
- transition: opacity .4s;  
- padding: 0;
-}
+.homec-breadcrumbs > span {
 
-.c-breadcrumb a {
- display: inline-block;
- transition: opacity .4s; 
- padding: 0;
-}
+  @include sp {
+    font-size: 1.6rem;
+    line-height: calc(33 / 16);
+    padding-inline: 2rem;
+  }
+ }
+
+
+// .c-breadcrumb {
+//  max-width: 88rem;
+//  width: 100%;
+//  margin: 0 auto;  
+//  padding-block: 9px 8px;
+//  display: flex;
+//  align-items: center;
+//  flex-wrap: wrap; 
+
+//  color: #000;
+//  font-size: 1.6rem; 
+//  line-height: calc(33 / 16);
+//  @include sp {
+//   max-width: none;
+//   width: 100%;
+//   padding-inline: 2rem;
+//   // padding-block: 9px 8px;
+//   padding-block: 0.9rem 0.7rem;
+//   line-height: calc(20 / 16);
+//  }
+// }
+
+// // Breadcrumb NavXTの設定の「パンくずの区切り」
+// // に、pタグを書いてる（notionに書いといた）
+// // pタグ
+// .c-breadcrumbs-sign { 
+//  display: inline-block;
+//  // padding-block: 0px 1px;
+//  padding-block: 0 0.1rem;
+//  padding-inline: 2rem; 
+// }
+
+// .c-breadcrumbs-sign:last-of-type {
+//  display: inline;
+// }
+
+// .c-breadcrumb span > span {
+//  display: inline;
+//  transition: opacity .4s;
+// }
+
+// .c-breadcrumb a {
+//  display: inline-block;
+//  transition: opacity .4s; 
+//  padding: 0;
+// }
 
 // .c-breadcrumb-wrap .c-breadcrumb .post.post-result.current-item {
 //  display: inline-block;
