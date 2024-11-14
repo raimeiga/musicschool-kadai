@@ -2,42 +2,89 @@
 @use '../../foundation/mixin' as *;
 
 
-.p-blog-details-main__under-sns-links {
- padding-top: 0.4rem;
-}
 
-.p-blog-details-main__under-sns-links--notice {
- margin-bottom: 0;
-}
-
-// .c-article-details-body__text {
 .p-blog-details-main__under-sns-links p {
- font-size: 1.8rem;
- line-height: 1.6;
  text-align: left;
+ 
 }
 
-// .c-article-details-body__head-middle {
 .p-blog-details-main__under-sns-links h2 {
- font-size: 2rem;
- // margin-top: 43px;
- // margin-block: 42px 20px;
- margin-block: 4.2rem 2rem;
  text-align: left;
- background-color: yellow;
+ margin-block: 3.3rem 1.5rem;
+ font-size: 2rem; 
+ font-weight: bold;
+ line-height: calc(40 / 20);
+ @include sp {
+  margin-block: 4.3rem 1.5rem;
+  font-size: 2rem;   
+  font-weight: bold;  
+  line-height: calc(30 / 20);
+ }
 }
 
 
+blockquote {
+ background: rgb(232,232,232);
+ //padding: 20px 30px 14px;
+ padding: 2rem 3rem 1.4rem;
+ margin-bottom: 2rem;
+ p {
+   font-size: 1.8rem;
+   line-height:calc(30 / 18);
+   background: rgb(232,232,232);
+      margin-bottom: 0;
+   padding-left: 3.7rem;
+   position: relative;
+   &::before {
+     content: url(../images/path42.svg);
+     width: 2.7rem;
+     position: absolute;
+     left: 0;
+   }
+ }
+ @include sp {
+  background: rgb(232,232,232);
+  //padding: 20px 30px 14px;
+  padding: 2rem 3rem 1.4rem;
+  margin-bottom: 2rem;
+  p {
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+    background: rgb(232,232,232);
+    margin-bottom: 0;
+    padding-left: 3.7rem;
+    position: relative;
+    &::before {
+      content: url(../images/path42.svg);
+      width: 2.7rem;
+      position: absolute;
+      left: 0;
+    }
+  }
+ }
+}
 
 // .c-article-details-body__head-small {
 .p-blog-details-main__under-sns-links h3 {
- font-size: 2rem;
- margin-top: 5rem;
- margin-bottom: 1.8rem;
+ font-size: 2rem; 
+ font-weight: bold;
+ line-height: calc(40 / 20);
+ margin-top: 4.2rem;
+ margin-bottom: 1.3rem;
  padding-left: 1.1rem;
+ padding-block: 0.2rem;
  position: relative;
  text-align: left;
+ @include sp {
+  font-size: 2rem;   
+  font-weight: bold;  
+  line-height: calc(30 / 20);
+  margin-top: 4.8rem;
+ margin-bottom: 1.5rem;
+ 
+ }
 }
+
 
 // .c-article-details-body__head-small ::before {
 .p-blog-details-main__under-sns-links h3::before  {
@@ -52,20 +99,44 @@
 }
 
 // .c-article-details-body__img {
-.p-blog-details-main__under-sns-links figure   {
-  width: 100%;
- height: 100%;
- max-width: 30rem;
- max-height: 20rem;
- overflow: hidden;
- margin-block: 1.7rem 3rem;
+.p-blog-details-main__under-sns-links figure  {
+   width: 30rem;
+  // max-width: 30rem;
+  // max-height: 20rem;
+  overflow: hidden;
+  margin-block: 1.7rem 3rem;
+  @include sp {
+   width: 33.5rem;
+   margin-block: 4rem 2.8rem;
+  }
 }
 
 // .c-article-details-body__img img { ★★★
 .p-blog-details-main__under-sns-links figure img {
-  height: auto;
+  // height: auto;
+  aspect-ratio: 300 / 200;
+  object-fit: cover;
+  @include sp {
+   aspect-ratio: 335 / 200;
+ }
 }
 
+// .wp-block-image {
+//  width: 30rem !important;
+//  @include sp {
+//   width: 33.5rem !important;
+//  }
+//  }
+ 
+//  .wp-block-image img {
+//   aspect-ratio: 300 / 200 !important;
+//   object-fit: cover !important;
+//   @include sp {
+//    aspect-ratio: 335 / 200 !important;
+//  }
+//  }
+
+ 
 // .c-article-details-body__list {
 // .p-blog-details-main__under-sns-links ul,ol  {
 //  background-color: yellow;
@@ -81,13 +152,21 @@
   margin-bottom: 4.1rem;
   list-style: disc; /* 親要素にマーカーを指定し、li（子）の前に出現*/
   padding-left: 2rem;
+  @include sp {
+   margin-bottom: 3.7rem;
+   padding-left: 2.2rem;
+  }
 }
 
 // .c-article-details-body__list-item {
 .p-blog-details-main__under-sns-links li  {
-  font-size: 1.8rem;
-  line-height: 1.6;
+  font-size: 1.8rem;  
+  line-height: calc(30 / 18); 
   text-align: left;  
+  @include sp {
+   font-size: 1.6rem;  
+   line-height: calc(30 / 16); 
+  }
 }
 
 /* マーカーのスタイルをカスタマイズ */
@@ -107,26 +186,6 @@
 //  margin-bottom: 20px;
 // }
 
-blockquote {
- background: rgb(232,232,232);
- // padding: 20px 30px 9px;
- padding: 2rem 3rem 0.9rem;
- margin-bottom: 3rem;
- p {
-   font-size: 1.8rem;
-   line-height: 1.6;
-   background: rgb(232,232,232);
-   margin-bottom: 0;
-   padding-left: 3.7rem;
-   position: relative;
-   &::before {
-     content: url(../images/path42.svg);
-     width: 2.7rem;
-     position: absolute;
-     left: 0;
-   }
- }
-}
 
 // // .c-article-details-body__blockquote-icon {
 // .p-blog-details-main__under-sns-links blockquote::before  {

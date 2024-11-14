@@ -1,5 +1,5 @@
-// @use '../../foundation/variable' as *;
-// @use '../../foundation/mixin' as *;
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
 
 
 .u-flex-1 {
@@ -10,4 +10,5 @@
  opacity: 1;
  visibility: visible;
 }
+
 

@@ -3,9 +3,13 @@
 
 
 .c-pager {
- display: inline-block;
- width: 100%;
- text-align: center;
+ background-color: yellow;
+ // display: inline-block;
+ display: flex;
+ justify-content: center;
+ column-gap: 1rem;
+ text-align: center; 
+ margin-inline: auto;
  .page-numbers {
    display: inline-block;
    width: 50px;
@@ -17,8 +21,8 @@
    text-decoration: none;
    color: #000;
    border: 1px solid #000;
-   margin-right: 10px;
-   margin-bottom: 10px;
+   margin-right: 0px;
+   // margin-bottom: 10px;
  }
  :last-child {
    margin-right: 0;
@@ -28,11 +32,13 @@
    background: #000;
  }
  .dots {
+   width: 38px;
    display: inline-block;
    font-size: 1.8rem;
    font-weight: bold;
-   margin-right: 10px;
-   border: none;
+   margin-right: 0px;
+   border:none;
+   padding-top: 5px;
  }
 }
 

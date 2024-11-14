@@ -8,6 +8,7 @@
  padding-bottom: 18.4rem;
  @include sp {
   width: 100%;
+  padding-bottom: 3rem;
  }
 }
 
@@ -109,7 +110,7 @@
  font-size: 1.8rem;
  line-height: calc(30 / 18); 
  text-align: left;
- margin-bottom: 20px;
+ margin-bottom: 2rem;
  @include sp {
   font-size: 1.6rem;
   line-height: calc(30 / 16);  

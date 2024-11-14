@@ -1,3 +1,56 @@
+
+
+<div class="-breadcrumb-wracp">
+  <div class="c-breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <!-- Breadcrumb NavXT 7.3.1 -->
+    <span property="itemListElement" typeof="ListItem">
+      <a property="item" typeof="WebPage" title="きたむらミュージックスクール（WP化課題）へ移動する" href="http://musicschool-kadai.local" class="home c-breadcrumb">
+        <span property="name">ホーム</span>
+      </a>
+      <meta property="position" content="1">
+    </span>
+    <p class="c-breadcrumbs-sign">&gt;</p>
+    <span property="itemListElement" typeof="ListItem">
+      <a property="item" typeof="WebPage" title="卒業実績へ移動する" href="http://musicschool-kadai.local/result/" class="archive post-result-archive c-breadcrumbs">
+      <span property="name">卒業実績</span>
+      </a><meta property="position" content="2">
+    </span>
+    <p class="c-breadcrumbs-sign">&gt;</p>
+    <span property="itemListElement" typeof="ListItem">
+      <a property="item" typeof="WebPage" title="Go to the クラシック タグ_卒業実績 archives." href="http://musicschool-kadai.local/result_tag/%e3%82%af%e3%83%a9%e3%82%b7%e3%83%83%e3%82%af/" class="taxonomy result_tag c-breadcrumbs">
+        <span property="name">クラシック</span>
+      </a>
+      <meta property="position" content="3">
+    </span>
+    <p class="c-breadcrumbs-sign">&gt;</p>
+    <span property="itemListElement" typeof="ListItem">
+      <span property="name" class="post post-result current-item c-breadcrumbs">タイトルが入ります。タイトルが入ります。タイトルが入ります。</span>
+      <meta property="url" content="http://musicschool-kadai.local/result/test-2-5-4-2-2/">
+      <meta property="position" content="4">
+    </span>        
+  </div>
+</div>
+
+<div class="c-breadcrumbs">
+  <span class="c-breadcrumbs-text">ホーム</span>
+  <span class="c-breadcrumbs-sign">&gt;</span>
+  <span class="c-breadcrumbs-text">卒業実績</span>
+  <span class="c-breadcrumbs-sign">&gt;</span>
+  <span class="c-breadcrumbs-text">クラシック</span>
+  <span class="c-breadcrumbs-sign">&gt;</span>
+  <span class="c-breadcrumbs-text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 <section class="blog-list">
   <div class="content-area content-area--search">
   <?php if ( !empty(get_search_query()) ): ?>
