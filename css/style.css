@@ -644,21 +644,10 @@ blockquote p::before {
   background: #e8e8e8;
 }
 
-.c-breadcrumbs-text,
-.c-breadcrumbs {
-  font-size: 1.6rem;
-  line-height: 2.0625;
-}
-@media only screen and (max-width: 767px) {
-  .c-breadcrumbs-text,
-  .c-breadcrumbs {
-    font-size: 1.6rem;
-    line-height: 1.6;
-  }
-}
-
 .c-breadcrumb {
-  padding: 17px 30px 14px;
+  max-width: 88rem;
+  width: 100%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -667,21 +656,29 @@ blockquote p::before {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  color: #000;
+  font-size: 1.6rem;
+  line-height: 2.0625;
+  padding-block: 0.9rem 0.8rem;
 }
 @media only screen and (max-width: 767px) {
   .c-breadcrumb {
     display: block;
-    padding: 0 20px 0;
+    max-width: none;
+    width: 100%;
+    line-height: 1.44;
+    padding-block: 0.7rem 0.65rem;
+    padding-inline: 2rem;
   }
 }
 
+.c-breadcrumbs-sign {
+  margin: 0 1.9rem;
+}
 @media only screen and (max-width: 767px) {
   .c-breadcrumbs-sign {
-    width: 20px;
+    width: 2rem;
     font-size: 1.6rem;
-    margin: 0 19px;
-    background-color: aqua;
-    line-height: 1;
   }
 }
 
