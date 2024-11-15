@@ -121,5 +121,6 @@
            ?>
           </div>          
         </div>
+      </div>
       <?php wp_head(); ?>
     </header>
