@@ -3334,7 +3334,6 @@ body::-ms-scrollbar-thumb:before {
 
 .p-result-details__image {
   width: 88rem;
-  overflow: hidden;
   position: relative;
 }
 @media only screen and (max-width: 767px) {
