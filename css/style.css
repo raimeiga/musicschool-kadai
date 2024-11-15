@@ -643,34 +643,45 @@ blockquote p::before {
 .c-breadcrumb-wrap {
   background: #e8e8e8;
 }
+
+.c-breadcrumbs-text,
+.c-breadcrumbs {
+  font-size: 1.6rem;
+  line-height: 2.0625;
+}
 @media only screen and (max-width: 767px) {
-  .c-breadcrumb-wrap {
+  .c-breadcrumbs-text,
+  .c-breadcrumbs {
     font-size: 1.6rem;
-    line-height: 2.0625;
+    line-height: 1.6;
   }
 }
 
 .c-breadcrumb {
-  max-width: 88rem;
-  width: 100%;
+  padding: 17px 30px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media only screen and (max-width: 767px) {
   .c-breadcrumb {
-    max-width: none;
-    width: 100%;
-    padding-inline: 2rem;
+    display: block;
+    padding: 0 20px 0;
   }
 }
 
-.c-breadcrumb > span {
-  padding-inline: 0 2rem;
-}
-
 @media only screen and (max-width: 767px) {
-  .homec-breadcrumbs > span {
+  .c-breadcrumbs-sign {
+    width: 20px;
     font-size: 1.6rem;
-    line-height: 2.0625;
-    padding-inline: 2rem;
+    margin: 0 19px;
+    background-color: aqua;
+    line-height: 1;
   }
 }
 
