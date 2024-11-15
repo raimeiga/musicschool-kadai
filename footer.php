@@ -1,4 +1,4 @@
-<footer>
+    <footer>
      <div class="p-footer__inner l-red-inner">
        <!-- <nav class="p-footer__nav p-footer-nav"> -->
        <?php
