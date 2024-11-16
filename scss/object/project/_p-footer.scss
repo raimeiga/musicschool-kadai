@@ -7,21 +7,26 @@
  color: #fff; 
 }
 
-.p-footer__logo {
- //background-color: yellow;
- width: 7.2rem; 
- // 画像は32×49なので、左右paddingをつけた分をwidthに加算
- padding: 1.5rem 2rem;
- margin: 0.6rem auto;
- transition: opacity .4s;
- @include sp {
-  // padding: 15px 20px 23px;
-  padding: 1.2rem 2rem 2.5rem;
-  margin: 0.6rem auto;
- }
+.p-footer__logo a {
+  display: block;
+  width: 7.2rem; 
+  padding: 1.5rem 2rem;
+  margin: 0.6rem auto; 
+  transition: opacity .4s;
+  @include sp {
+    // padding: 1.2rem 2rem 12px;
+    padding: 1.2rem 2rem 1.2rem;
+    // margin: 0.6rem auto 18px; 
+    margin: 0.6rem auto 1.8rem; 
+  }
+  }
+
+.p-footer__logo img {
+ aspect-ratio: 32 / 49;
 }
 
-.p-footer__logo:hover {
+
+.p-footer__logo a:hover {
  opacity: 0.5; 
 }
 
