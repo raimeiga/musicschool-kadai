@@ -4,8 +4,7 @@
 
 
 .p-blog-details-main__under-sns-links p {
- text-align: left;
- 
+ text-align: left; 
 }
 
 .p-blog-details-main__under-sns-links h2 {
@@ -32,7 +31,7 @@ blockquote {
    font-size: 1.8rem;
    line-height:calc(30 / 18);
    background: rgb(232,232,232);
-      margin-bottom: 0;
+   margin-bottom: 0;
    padding-left: 3.7rem;
    position: relative;
    &::before {
@@ -169,6 +168,22 @@ blockquote {
   }
 }
 
+// .c-article-details-body__link-text {
+ .p-blog-details-main__under-sns-links a {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: calc(33 / 20);
+  color: $color-red;
+  text-decoration-line: underline;
+ }
+ 
+ // .c-article-details-body__border {
+ .p-blog-details-main__under-sns-links hr  {
+  border-top: 0.05rem solid;
+  border-bottom: none;
+ }
+
+ 
 /* マーカーのスタイルをカスタマイズ */
 // .p-blog-details-main__under-sns-links li::marker {
 //  content: '•'; /* カスタムマーカー */
@@ -194,16 +209,4 @@ blockquote {
 //  margin-right: 10px;
 // }
 
-// .c-article-details-body__link-text {
-.p-blog-details-main__under-sns-links a {
- font-size: 2rem;
- font-weight: bold;
- color: rgb(203, 0, 0);
-}
-
-// .c-article-details-body__border {
-.p-blog-details-main__under-sns-links hr  {
- border-top: 0.05rem solid;
- border-bottom: none;
-}
 

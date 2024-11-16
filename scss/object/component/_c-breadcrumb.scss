@@ -12,17 +12,16 @@
  margin: 0 auto; 
  display: flex;
  align-items: center;
- flex-wrap: wrap;  
- 
+ flex-wrap: wrap; 
  color: #000;
  font-size: 1.6rem; 
  line-height: calc(33 / 16);
  // padding-block: 9px 8px; 
  padding-block: 0.9rem 0.8rem; 
- @include sp {
-  display: block;
+ @include sp {  
   max-width: none;
   width: 100%;  
+  display: block !important;
   line-height: 1.44;
   padding-block: 0.7rem 0.65rem;
   padding-inline: 2rem;  

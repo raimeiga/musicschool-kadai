@@ -7,7 +7,7 @@
      
       <div class="p-search__inner l-inner">
         <div class="p-search__top-text">
-        <?php if ( !empty(get_search_query()) ): ?>
+          <?php if ( !empty(get_search_query()) ): ?>
           <?php if (have_posts()): ?>
           <?php
           $paged = (get_query_var('paged')) ? absint(get_query_var('paged')): 1;
@@ -24,7 +24,7 @@
           <p><?php echo $the_query->found_posts; ?>件</p>
         </div>
         <div class="p-search__lists">
-        <?php if ( $the_query->have_posts()): while ( $the_query->have_posts()): $the_query->the_post(); ?>
+          <?php if ( $the_query->have_posts()): while ( $the_query->have_posts()): $the_query->the_post(); ?>
           <a href="<?php the_permalink(); ?>">
             <div class="p-blog-list p-blog__list-row">
               <div class="p-blog-list__image-height-longer">
@@ -33,7 +33,7 @@
               $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
               if (get_post_thumbnail_id($post->ID)) :
               ?>
-              <img src="<?php echo $thumb_url[0]; ?>" alt="">
+              <img src="<?php echo $thumb_url[0]; ?>" alt="ブログの画像">
               <?php endif; ?>
               </div>
               <p class="c-caption c-caption--w-pc80-sp90">
@@ -71,14 +71,14 @@
             </div>
           </div>
           <?php endif;//if (have_posts() ?>
-        <?php else://!empty(get_search_query()) ?>
-        <div class="p-search-error__back-btn">
-          <p class="p-search-error__text">検索キーワードが未入力です。</p>
-          <div class="p-search-error__btn-wrap">
-            <a onclick="history.back()" class="c-btn c-btn--contact-page">戻る</a>
+          <?php else://!empty(get_search_query()) ?>
+          <div class="p-search-error__back-btn">
+            <p class="p-search-error__text">検索キーワードが未入力です。</p>
+            <div class="p-search-error__btn-wrap">
+              <a onclick="history.back()" class="c-btn c-btn--contact-page">戻る</a>
+            </div>
           </div>
-        </div>
-        <?php endif;//!empty(get_search_query()) ?>
+         <?php endif;//!empty(get_search_query()) ?>
         </div>
 
         <!-- ページャーのテンプレ読み込み -->
@@ -86,8 +86,8 @@
           <?php if (have_posts()): ?>
             <?php get_template_part('template-parts/pager', '', $the_query); ?>
           <?php endif; ?>
-        <?php endif; ?>     
-       
+        <?php endif; ?>  
+      </div>
     </main>
 
     <!-- トップに戻るボタン -->

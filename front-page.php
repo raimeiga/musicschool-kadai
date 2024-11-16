@@ -135,7 +135,7 @@
                  $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
                  if (get_post_thumbnail_id($post->ID)):
                  ?>
-                 <img src="<?php echo $thumb_url[0] ?>" alt="">
+                 <img src="<?php echo $thumb_url[0] ?>" alt="生徒の画像">
                  <?php endif; ?>
                </div>
                <p class="p-voice-list__name p-voice-list__name--my">
@@ -269,7 +269,7 @@
                $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
                if (get_post_thumbnail_id($post->ID)) :
                ?>
-                 <img src="<?php echo $thumb_url[0]; ?>" alt="">
+                 <img src="<?php echo $thumb_url[0]; ?>" alt="ブログ画像">
                <?php endif; ?>
              </div>
              <p class="c-caption c-caption--w-pc80-sp90">
