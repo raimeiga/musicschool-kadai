@@ -89,7 +89,7 @@
       </div>
     </a>    
     <!-- 問い合わせボタン -->
-    <a href="contact_form.html" class="c-btn c-btn--fixed u-scroll-show">お問い合わせ</a>
+    <?php get_template_part('template-parts/contact-button'); ?>
  
  <!-- フッターのテンプレパーツの読み込み -->
  <?php get_footer(); ?>
