@@ -79,6 +79,16 @@
     <meta name="description" content="きたむらミュージックスクール公式ホームページの
     <?php the_title(); ?>ページです。">
   <?php endif; ?>
+
+  <!-- Google構造化データ マークアップ -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "きたむらミュージックスクール"
+  }
+  </script>
+  
   <?php wp_head(); ?>
 </head>
 

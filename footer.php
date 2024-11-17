@@ -11,34 +11,41 @@
         ?>       
        <!-- </nav> -->
        <div class="p-footer__logo">
-         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+         <a href="<?php echo esc_url( home_url( '/' ) .  '#top'); ?>">
            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-white.svg" alt="きたむらミュージックスクール">
          </a>
        </div>
        <p class="p-footer__copyright">Copyright<span style="font-size: 1em;">©</span>0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
        <div>
          <ul class="p-footer__icon-wrap">
+           <!-- Twitter -->
            <li>
-             <a href="">
+             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-twitter.svg" alt="twitter">
              </a>
-           </li>          
+           </li>
+           
+           <!-- Facebook -->
            <li>
-             <a href="">
+             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-facebook.svg" alt="facebook">
              </a>
-           </li> 
+           </li>
+           
+           <!-- YouTube -->
            <li>
-             <a href="">
+             <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-youtube.svg" alt="youtube">
              </a>
            </li>
+           
+           <!-- Instagram -->
            <li>
-             <a href="">
-               <img src="<?php echo get_template_directory_uri(); ?>/images/icon-instagram.svg" alt="instagram"> 
+             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+               <img src="<?php echo get_template_directory_uri(); ?>/images/icon-instagram.svg" alt="instagram">
              </a>
-           </li> 
-         </ul>       
+           </li>
+         </ul>
        </div>
      </div>
     </footer>

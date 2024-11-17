@@ -80,12 +80,12 @@
             <div class="p-reason-content__image">
               <picture>
                 <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/reason02-sp.jpg">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/reason02.jpg" alt="技収益化するためのビジネスサポート！">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/reason02.jpg" alt="収益化するためのビジネスサポート！">
               </picture>
             </div>
             <div class="p-reason-content__textarea p-reason-content-textarea">
               <div class="p-reason-content-textarea__title u-flex-1">
-                <h2>技収益化するためのビジネスサポート！</h2>
+                <h2>収益化するためのビジネスサポート！</h2>
               </div>
               <p class="p-reason-content-textarea__text u-flex-1">
                コンセプト設計や集客方法、マーケティングリサーチなど、音楽で稼ぎつづけるための方法やマインドセットをサポートするクラスをご用意。
