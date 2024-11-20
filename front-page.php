@@ -11,7 +11,7 @@
            </picture> 
          </div>
          <div class="p-fv__contents">
-           <h2>「音楽で生きる」<br class="sp" >を叶える<br>ミュージックスクール</h2>
+           <h1>「音楽で生きる」<br class="sp" >を叶える<br>ミュージックスクール</h1>
          </div>  
        </div>
      </div>
