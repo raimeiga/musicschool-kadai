@@ -50,15 +50,15 @@
              </p>
              <div class="p-blog-list__text">
              <?php
-  $title = get_the_title();
-  // PCの場合（66文字以下に制限）
-  if (!wp_is_mobile() && mb_strlen($title) > 66) {
-    $title = mb_substr($title, 0, 66) . '...';
-  } elseif (wp_is_mobile() && mb_strlen($title) > 48) { // スマホの場合（48文字以下に制限）
-    $title = mb_substr($title, 0, 48) . '...';
-  }
-?>
-<h3 class="p-blog-list__title-mb"><?php echo $title; ?></h3>
+               $title = get_the_title();
+               // PCの場合（66文字以下に文字数制限）
+               if (!wp_is_mobile() && mb_strlen($title) > 66) {
+                 $title = mb_substr($title, 0, 66) . '...';
+               } elseif (wp_is_mobile() && mb_strlen($title) > 48) { // スマホの場合（48文字以下に制限）
+                 $title = mb_substr($title, 0, 48) . '...';
+               }
+             ?>
+             <h3 class="p-blog-list__title-mb"><?php echo $title; ?></h3>
                <time datetime="the_time('Y-m-d')" class="p-blog-list__time-side-change"><?php the_time('Y.m.d'); ?></time>
                <p class="p-blog-list__article"><?php echo get_the_excerpt(); ?></p>
              </div>
