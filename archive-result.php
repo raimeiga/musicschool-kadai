@@ -55,11 +55,35 @@
             endif; ?>
           </p>
           <!-- 最初の2つの記事には特別なクラスを付け、それ以降の記事には別のクラスを付ける -->
-          <?php if ($counter <= 2) : ?>
-            <h3 class="p-result-list-list__title--pad20"><?php the_title(); ?></h3>
-          <?php else : ?>
-            <h3 class="p-result-list-list__title"><?php the_title(); ?></h3>
-          <?php endif; ?>
+<?php if ($counter <= 2) : ?>
+  <h3 class="p-result-list-list__title--pad20">
+    <?php 
+      $title = get_the_title(); // タイトルを取得
+      if (wp_is_mobile()) {
+        // スマートフォンの場合は48文字まで表示
+        echo mb_substr($title, 0, 48) . '...';
+      } else {
+        // PCの場合は66文字まで表示
+        echo mb_substr($title, 0, 66) . '...';
+      }
+    ?>
+  </h3>
+<?php else : ?>
+  <h3 class="p-result-list-list__title">
+    <?php 
+      $title = get_the_title(); // タイトルを取得
+      if (wp_is_mobile()) {
+        // スマートフォンの場合は48文字まで表示
+        echo mb_substr($title, 0, 48) . '...';
+      } else {
+        // PCの場合は66文字まで表示
+        echo mb_substr($title, 0, 66) . '...';
+      }
+    ?>
+  </h3>
+<?php endif; ?>
+
+
           <time datetime="the_time('Y-m-d')" class="p-result-list-list__time"><?php the_time('Y.m.d'); ?></time>
         </a>
       <?php endwhile; endif; ?>           
