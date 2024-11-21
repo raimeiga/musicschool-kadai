@@ -4,12 +4,12 @@
 .c-blog-article__wrap {
  display: flex;
  justify-content: space-between;
- margin-top: 5.8rem;
+ margin-top: 5.2rem;
  //margin-bottom: 9.4rem;
- margin-bottom: 10.2rem;
+ margin-bottom: 9.4rem;
  // background-color: yellow;
  @include sp {
-  margin-top: 4.3rem;
+  margin-top: 3.3rem;
   margin-bottom: 6.4rem;
  }
 }
@@ -19,12 +19,19 @@
  max-width: 34rem; 
  margin-right: 2rem;  
  // width: 34rem; 
+ transition: opacity .4s;
 }
 
 .c-blog-article--next-result {
  width: 50%;
  max-width: 34rem; 
  // width: 34rem; 
+ transition: opacity .4s;
+}
+
+.c-blog-article--prev-result:hover,
+.c-blog-article--next-result:hover {
+ opacity: 0.5; 
 }
 
 .c-blog-article--blog {

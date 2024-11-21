@@ -9,7 +9,15 @@
       <?php while ( have_posts() ): the_post(); ?>
       <div class="p-result-details__inner l-inner">
         <div class="p-result-details__image">
-          <?php the_post_thumbnail('large'); ?>
+          <?php 
+           if ( has_post_thumbnail() ) :
+             // アイキャッチ画像が設定されていればその画像を表示
+             the_post_thumbnail('large');
+           else :
+             // アイキャッチ画像が設定されていない場合はダミー画像を表示
+             echo '<img src="' . get_template_directory_uri() . '/images/dummy-image.jpg" alt="ダミー画像">';
+           endif;
+           ?>
           <p class="c-caption c-caption--w100">
             <?php if( has_term('', 'result_tag', $post->ID) ): ?> 
             <?php $post_term = get_the_terms($post->ID, 'result_tag'); echo $post_term[0]->name; ?> <?php endif; ?>

@@ -6,8 +6,8 @@
        <div class="p-fv">
          <div class="p-fv__image">
            <picture>
-             <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/fv-sp.jpg">
-             <img src="<?php echo get_template_directory_uri(); ?>/images/fv.jpg" alt="「音楽で生きる」を叶えるミュージックスクール">
+             <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/fv-black-sp.jpg">
+             <img src="<?php echo get_template_directory_uri(); ?>/images/fv-black.jpg" alt="「音楽で生きる」を叶えるミュージックスクール">
            </picture> 
          </div>
          <div class="p-fv__contents">
@@ -131,12 +131,14 @@
              <div class="p-voice__list p-voice-list">
                <div class="p-voice-list__image">
                  <?php
-                 $thumbnail_id = get_post_thumbnail_id($post->ID);
-                 $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
-                 if (get_post_thumbnail_id($post->ID)):
+                   // アイキャッチ画像が設定されていればその画像を表示
+                   if (has_post_thumbnail()):
+                     the_post_thumbnail('small'); // 'small' サイズのアイキャッチ画像を表示
+                   else:
+                     // アイキャッチ画像が設定されていない場合、ダミー画像を表示
+                     echo '<img src="' . get_template_directory_uri() . '/images/dummy-image.jpg" alt="ダミー画像">';
+                   endif;
                  ?>
-                 <img src="<?php echo $thumb_url[0] ?>" alt="生徒の画像">
-                 <?php endif; ?>
                </div>
                <p class="p-voice-list__name p-voice-list__name--my">
                  <?php echo get_post_meta(get_the_ID(), '職業', true); ?>
@@ -265,12 +267,14 @@
            <a href="<?php echo get_permalink($post->ID); ?>" class="p-blog__list p-blog-list">            
              <div class="p-blog-list__image">
                <?php
-               $thumbnail_id = get_post_thumbnail_id($post->ID);
-               $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
-               if (get_post_thumbnail_id($post->ID)) :
+                 if (has_post_thumbnail()) :
+                   // アイキャッチ画像が設定されている場合はその画像を表示
+                   the_post_thumbnail('small'); // 画像サイズは必要に応じて変更
+                 else :
+                   // アイキャッチ画像がない場合、ダミー画像を表示
+                   echo '<img src="' . get_template_directory_uri() . '/images/dummy-image.jpg" alt="ダミー画像">';
+                 endif;
                ?>
-                 <img src="<?php echo $thumb_url[0]; ?>" alt="ブログ画像">
-               <?php endif; ?>
              </div>
              <p class="c-caption c-caption--w-pc80-sp90">
                <?php

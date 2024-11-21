@@ -46,13 +46,16 @@
     while( $the_query->have_posts() ): $the_query->the_post(); ?>
     <a href="<?php echo get_permalink($post->ID); ?>" class="p-sidebar-reco-articles__list">                
       <div class="p-sidebar-reco-articles__image">    
-      <?php
-      $thumbnail_id = get_post_thumbnail_id($post->ID);
-      $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
-      if ( get_post_thumbnail_id($post->ID) ):
-      ?>
-        <img src="<?php echo $thumb_url[0]; ?>" alt="">
-      <?php endif ;?>             
+        <?php
+        // アイキャッチ画像があるか確認
+        if ( has_post_thumbnail($post->ID) ):
+            // アイキャッチ画像がある場合、画像を表示
+            echo get_the_post_thumbnail($post->ID, 'small'); // 必要なサイズに変更
+        else:
+            // アイキャッチ画像がない場合、ダミー画像を表示
+            echo '<img src="' . get_template_directory_uri() . '/images/dummy-image.jpg" alt="ダミー画像">';
+        endif;
+        ?>                    
       </div>
       <div class="p-sidebar-reco-articles__title u-flex-1">
         <p>

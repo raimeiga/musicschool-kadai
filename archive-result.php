@@ -38,9 +38,15 @@
       ?>
         <a href="<?php the_permalink(); ?>" class="p-result-list__list p-result-list-list">
           <div class="p-result-list-list__image">
-            <?php if (has_post_thumbnail()) {
-              the_post_thumbnail('custom-size'); // 'custom-size'はカスタムサイズ
-            } ?>
+            <?php 
+              if (has_post_thumbnail()) {
+                // アイキャッチ画像が設定されていればその画像を表示
+                the_post_thumbnail('custom-size'); // 'custom-size'はカスタムサイズ
+              } else {
+                // アイキャッチ画像が設定されていない場合、ダミー画像を表示
+                echo '<img src="' . get_template_directory_uri() . '/images/dummy-image.jpg" alt="ダミー画像">';
+              }
+            ?>
           </div>
           <p class="c-caption c-caption--w100">
             <?php if( has_term('', 'result_tag', $post->ID) ): 

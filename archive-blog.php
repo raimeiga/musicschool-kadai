@@ -33,24 +33,37 @@
         <div class="p-blog__lists-column">
          <!-- 記事の取得 -->
          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <a href="<?php the_permalink(); ?>" class="p-blog__list-row p-blog-list">
-              <div class="p-blog-list__image-height-longer">
-                <?php if (has_post_thumbnail()) {
-                   the_post_thumbnail('custom-size'); // 'custom-size'はカスタムサイズ
-                 }
-                ?>
-              </div>
-              <p class="c-caption c-caption--w-pc80-sp90">
-                <?php if( has_term('', 'blog_tag', $post->ID) ): $post_term = get_the_terms($post->ID, 'blog_tag'); 
-                 echo $post_term[0]->name; endif; ?>
-              </p>
-              <div class="p-blog-list__text">
-               <h3 class="p-blog-list__title-mb"><?php the_title(); ?></h3>
-               <time datetime="the_time('Y-m-d')" class="p-blog-list__time-side-change"><?php the_time('Y.m.d'); ?></time>
-                <p class="p-blog-list__article"><?php echo get_the_excerpt(); ?></p>
-              </div>
-            </a>
-          <?php endwhile; endif; ?>  
+          <a href="<?php the_permalink(); ?>" class="p-blog__list-row p-blog-list">
+            <div class="p-blog-list__image-height-longer">
+              <?php if (has_post_thumbnail()) {
+                the_post_thumbnail('custom-size'); // 'custom-size'はカスタムサイズ
+              } else {
+                // アイキャッチ画像がない場合にダミー画像を表示
+                echo '<img src="' . get_template_directory_uri() . '/images/dummy-image.jpg" alt="ダミー画像">';
+              } ?>
+            </div>
+            <p class="c-caption c-caption--w-pc80-sp90">
+              <?php if( has_term('', 'blog_tag', $post->ID) ): 
+                $post_term = get_the_terms($post->ID, 'blog_tag'); 
+                echo $post_term[0]->name; 
+              endif; ?>
+            </p>
+            <div class="p-blog-list__text">
+              <?php
+                $title = get_the_title();
+                // PCの場合（66文字以下に制限）
+                if (strlen($title) > 66) {
+                  $title = mb_substr($title, 0, 66) . '...';
+                } elseif (wp_is_mobile() && strlen($title) > 48) { // スマホの場合（48文字以下に制限）
+                  $title = mb_substr($title, 0, 48) . '...';
+                }
+              ?>
+              <h3 class="p-blog-list__title-mb"><?php echo $title; ?></h3>
+              <time datetime="the_time('Y-m-d')" class="p-blog-list__time-side-change"><?php the_time('Y.m.d'); ?></time>
+              <p class="p-blog-list__article"><?php echo get_the_excerpt(); ?></p>
+            </div>
+          </a>
+        <?php endwhile; endif; ?>
         </div>
         <!-- ページャーのテンプレ読み込み -->
         <?php get_template_part('template-parts/pager', '', $the_query); ?>

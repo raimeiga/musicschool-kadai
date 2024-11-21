@@ -189,7 +189,7 @@ display: none;
 .p-contact__textarea {
 width: 71.1rem;
 min-height: 30rem !important; //最小の高さを設定
-height: auto !important; /* 高さを自動調整 */
+// height: auto !important; /* 高さを自動調整 */
 resize: vertical; //縦方向だけリサイズを許可
 background: #fff;
 padding: 1.5rem 2rem;
@@ -197,7 +197,7 @@ border: solid 0.05rem #000;
 @include sp {
  width: 100%;
  min-height: 19rem!important; //最小の高さを設定
- height: auto !important; /* 高さを自動調整 */
+ // height: auto !important; /* 高さを自動調整 */
  padding: 1rem 2rem;  
 }
 }

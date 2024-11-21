@@ -66,6 +66,7 @@
   font-weight: 600;
   line-height: calc(25 / 20);
   text-align: left;
+  margin-top: 0;
   margin-bottom: 1.2rem;
   @include sp {
     // height: 5.6rem;
@@ -73,7 +74,7 @@
     font-weight: 600;
     line-height: calc(28 / 17);
     text-align: left;
-    margin-block: 0.9rem 0.4rem;
+    margin-block: 0 0.4rem;
   }
 }
 

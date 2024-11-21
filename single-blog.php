@@ -9,7 +9,13 @@
       <div class="p-blog-details__inner l-inner">
         <div class="p-blog-details__main p-blog-details-main">            
           <div class="p-blog-details-main__01-image">            
-            <?php the_post_thumbnail('large'); ?>
+            <?php if (has_post_thumbnail()) {
+                 the_post_thumbnail('large'); // アイキャッチ画像が設定されている場合は通常の画像を表示
+              } else {
+                  // アイキャッチ画像が設定されていない場合にダミー画像を表示
+                  echo '<img src="' . get_template_directory_uri() . '/images/dummy-image.jpg" alt="ダミー画像">';
+              } 
+            ?>
           </div>  
           <p class="c-caption c-caption--w-pc80-sp90"> 
             <?php if( has_term('', 'blog_tag', $post->ID) ): $post_term = get_the_terms($post->ID, 'blog_tag'); 

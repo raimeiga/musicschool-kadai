@@ -1,4 +1,6 @@
+
 <?php
+
 // CSSとJavaScriptを読み込む関数
 function custom_theme_scripts() {
     // リセットCSS
@@ -119,5 +121,11 @@ add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
   return false;
 }
+
+//省略記号を [...] ではなく、単純な3点リーダー（...）に変更
+function modify_read_more_link() {
+ return '...'; // 省略記号を「...」に設定
+}
+add_filter('excerpt_more', 'modify_read_more_link');
 
 

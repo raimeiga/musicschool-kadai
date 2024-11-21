@@ -3,18 +3,40 @@
 
 
 
-.p-blog-details-main__under-sns-links p {
+.p-blog-details-main__under-sns-links {
+ @include sp {
+  padding-bottom: 1rem;  
+ }
+}
+
+.p-blog-details-main__under-sns-links > p:nth-of-type(1) {
  text-align: left; 
+ margin-top: 4.8rem;
+ @include sp {
+  margin-top: 2.7rem;
+ }
+}
+
+
+.p-blog-details-main__under-sns-links p:nth-of-type(2) {
+ text-align: left; 
+ margin-top: 1.5rem; 
+}
+
+.p-blog-details-main__under-sns-links > p:last-of-type {
+ text-align: left; 
+ margin-top: 2.6rem;
 }
 
 .p-blog-details-main__under-sns-links h2 {
  text-align: left;
- margin-block: 3.3rem 1.5rem;
+ // margin-block: 3.3rem 1.5rem;
+ margin-top: 3.3rem;
  font-size: 2rem; 
  font-weight: bold;
  line-height: calc(40 / 20);
  @include sp {
-  margin-block: 4.3rem 1.5rem;
+  margin-block: 4.1rem 1.5rem;
   font-size: 2rem;   
   font-weight: bold;  
   line-height: calc(30 / 20);
@@ -26,11 +48,12 @@ blockquote {
  background: rgb(232,232,232);
  //padding: 20px 30px 14px;
  padding: 2rem 3rem 1.4rem;
- margin-bottom: 2rem;
+ margin-bottom:0;
  p {
+  text-align: left;
    font-size: 1.8rem;
    line-height:calc(30 / 18);
-   background: rgb(232,232,232);
+   background: rgb(232,232,232);   
    margin-bottom: 0;
    padding-left: 3.7rem;
    position: relative;
@@ -103,7 +126,7 @@ blockquote {
   // max-width: 30rem;
   // max-height: 20rem;
   overflow: hidden;
-  margin-block: 1.7rem 3rem;
+  margin-top: 1.7rem;
   @include sp {
    width: 33.5rem;
    margin-block: 4rem 2.8rem;
@@ -147,11 +170,13 @@ blockquote {
 // }
 
 .p-blog-details-main__under-sns-links ul, 
-.p-blog-details-main__under-sns-links ol {    
+.p-blog-details-main__under-sns-links ol {  
+  margin-top: 2.8rem;
   margin-bottom: 4.1rem;
   list-style: disc; /* 親要素にマーカーを指定し、li（子）の前に出現*/
   padding-left: 2rem;
   @include sp {
+   margin-top: 2.7rem;
    margin-bottom: 3.7rem;
    padding-left: 2.2rem;
   }
@@ -169,7 +194,7 @@ blockquote {
 }
 
 // .c-article-details-body__link-text {
- .p-blog-details-main__under-sns-links a {
+ .p-blog-details-main__under-sns-links a {  
   font-size: 2rem;
   font-weight: bold;
   line-height: calc(33 / 20);
@@ -179,10 +204,21 @@ blockquote {
  
  // .c-article-details-body__border {
  .p-blog-details-main__under-sns-links hr  {
-  border-top: 0.05rem solid;
-  border-bottom: none;
+  border-top: 0.05rem solid; 
+  margin-top: 4rem;
+  @include sp {
+   margin-top: 3rem;
+  }
  }
 
+.p-blog-details-main__under-sns-links p a:last-child {
+ transition: opacity .4s;
+}
+
+.p-blog-details-main__under-sns-links p a:last-child:hover {
+ opacity: 0.5;
+}
+ 
  
 /* マーカーのスタイルをカスタマイズ */
 // .p-blog-details-main__under-sns-links li::marker {

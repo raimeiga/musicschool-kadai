@@ -37,7 +37,7 @@
  }
 }
 
-.p-fv__contents h2 {
+.p-fv__contents h1 {
  color: #fff; 
  // ↓font-size: 4rem;で書くと、_base.scssの支配を
  // 受けて、941以上で拡大しないのでcalcで書いた。

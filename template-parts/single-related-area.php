@@ -20,14 +20,17 @@
     <?php if( $the_query->have_posts() ):
     while( $the_query->have_posts() ): $the_query->the_post(); ?> 
       <a href="<?php echo get_permalink($post->ID); ?>" class="p-blog-details-main-related-article__list">
-      <div class="p-blog-details-main-related-article__image <?php echo ($args['post_type'] === 'result') ? 'result-image' : 'blog-image'; ?>">
+        <div class="p-blog-details-main-related-article__image <?php echo ($args['post_type'] === 'result') ? 'result-image' : 'blog-image'; ?>">
           <?php
-          $thumbnail_id = get_post_thumbnail_id($post->ID);
-          $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
-          if ( get_post_thumbnail_id($post->ID) ):
-          ?>
-            <img src="<?php echo $thumb_url[0]; ?>" alt="">
-          <?php endif; ?>
+            // アイキャッチ画像があるか確認
+            if ( has_post_thumbnail() ):
+                // アイキャッチ画像があればその画像を表示
+                the_post_thumbnail('small'); // サイズは必要に応じて変更
+            else:
+                // アイキャッチ画像がない場合にダミー画像を表示
+                echo '<img src="' . get_template_directory_uri() . '/images/dummy-image.jpg" alt="ダミー画像">';
+            endif;
+            ?>
         </div>
         <p class="c-caption c-caption--w80"><?php echo $term->name; ?></p>
         <div class="p-blog-details-main-related-article__text u-flex-1">

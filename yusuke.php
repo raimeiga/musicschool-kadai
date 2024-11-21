@@ -1,3 +1,32 @@
+<div class="p-blog-details-main__under-sns-links">            
+  <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入本文が入ります。</p>
+  <h2 class="wp-block-heading">H2見出しが入ります。H2見出しが入ります。</h2>
+  <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。 本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+  <figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="600" height="400" src="http://musicschool-kadai.local/wp-content/uploads/2024/11/blog-details__MEGANE.jpg" alt="" class="wp-image-11" srcset="http://musicschool-kadai.local/wp-content/uploads/2024/11/blog-details__MEGANE.jpg 600w, http://musicschool-kadai.local/wp-content/uploads/2024/11/blog-details__MEGANE-300x200.jpg 300w" sizes="(max-width: 600px) 100vw, 600px"></figure>
+  <ul class="wp-block-list">
+    <li>リストが入ります</li>
+    <li>リストが入ります</li>
+    <li>リストが入ります</li>
+  </ul>
+  <hr class="wp-block-separator has-alpha-channel-opacity">
+  <h3 class="wp-block-heading">H3見出しが入ります。H3見出しが入ります。</h3>
+  <blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+    <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+  </blockquote>
+  <p>
+     <a href="/#">テキストリンク</a>
+  </p>
+</div>
+
+
+
+
+
+
+
+
+
+
 <div class="c-breadcrumb-wrap">
   <div class="c-breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
   <!-- Breadcrumb NavXT 7.3.1 -->

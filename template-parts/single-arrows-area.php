@@ -10,7 +10,16 @@
       <div class="c-blog-article__item-box">
         <?php if(!empty($args) && $args['image_area'] == 'has'): ?>
         <div class="c-blog-article__image pc">
-          <img src="<?php echo get_the_post_thumbnail_url($prev_post->ID); ?>" alt="">
+        <?php
+          // アイキャッチ画像があるかどうかを確認
+          if ( has_post_thumbnail($prev_post->ID) ) :
+            // アイキャッチ画像があれば表示
+            echo '<img src="' . get_the_post_thumbnail_url($prev_post->ID) . '" alt="">';
+          else :
+            // アイキャッチ画像がなければダミー画像を表示
+            echo '<img src="' . get_template_directory_uri() . '/images/dummy-image.jpg" alt="ダミー画像">';
+          endif;
+          ?>
         </div>
         <?php endif; ?>
         <p class="c-blog-article__title u-flex-1">
@@ -33,7 +42,16 @@
      <div class="c-blog-article__item-box">
        <?php if(!empty($args) && $args['image_area'] == 'has'): ?>
        <div class="c-blog-article__image pc">
-         <img src="<?php echo get_the_post_thumbnail_url($next_post->ID); ?>" alt="">
+       <?php
+         // アイキャッチ画像があるかどうかを確認
+         if ( has_post_thumbnail($next_post->ID) ) :
+           // アイキャッチ画像があれば表示
+           echo '<img src="' . get_the_post_thumbnail_url($next_post->ID) . '" alt="">';
+         else :
+           // アイキャッチ画像がなければダミー画像を表示
+           echo '<img src="' . get_template_directory_uri() . '/images/dummy-image.jpg" alt="ダミー画像">';
+         endif;
+         ?>
        </div>
        <?php endif; ?>
        <p class="c-blog-article__title u-flex-1">

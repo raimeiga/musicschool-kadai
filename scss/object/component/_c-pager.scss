@@ -23,6 +23,7 @@
    border: 1px solid #000;
    margin-right: 0px;
    // margin-bottom: 10px;
+   transition: background-color 0.4s, color 0.4s;
  }
  :last-child {
    margin-right: 0;
@@ -39,8 +40,15 @@
    margin-right: 0px;
    border:none;
    padding-top: 5px;
+   pointer-events: none;
  }
 }
+
+.page-numbers:hover {
+background-color: #000;
+ color: #fff;
+}
+
 
 // .c-pagination {
 //  // background-color: blue;
