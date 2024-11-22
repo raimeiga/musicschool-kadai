@@ -129,3 +129,13 @@ function modify_read_more_link() {
 add_filter('excerpt_more', 'modify_read_more_link');
 
 
+// パンくずリストのタイトルに35字の文字数制限を設定
+function limit_breadcrumb_title_length( $title ) {
+ // 35文字を超えた場合に切り捨てて「...」を追加
+ if ( mb_strlen( $title ) > 35 ) {
+     $title = mb_substr( $title, 0, 35 ) . '...';
+ }
+ return $title;
+}
+add_filter( 'bcn_breadcrumb_title', 'limit_breadcrumb_title_length' );
+
