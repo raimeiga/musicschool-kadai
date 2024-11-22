@@ -35,12 +35,10 @@
         <p class="c-caption c-caption--w80"><?php echo $term->name; ?></p>
         <div class="p-blog-details-main-related-article__text u-flex-1">
           <p>
-          <?php if(mb_strlen($post->post_title)>32) 
-          {$title= mb_substr($post->post_title,0,32); echo $title . '...';} 
-          else {echo $post->post_title;} ?>
+            <?php echo get_the_title(); ?>
           </p>
           <time datetime="the_time('Y-m-d')" class="p-blog-details-main__date"><?php the_time('Y.m.d') ?></time>
-        </div>                     
+        </div>                 
       </a>
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
