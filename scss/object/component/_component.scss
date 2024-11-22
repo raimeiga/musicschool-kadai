@@ -2,30 +2,32 @@
 @use '../../foundation/mixin' as *;
 
 
-
 .p-blog-details-main__under-sns-links {
  @include sp {
   padding-bottom: 1rem;  
  }
 }
 
-.p-blog-details-main__under-sns-links > p:nth-of-type(1) {
- text-align: left; 
+.p-blog-details-main__under-sns-links > p:nth-of-type(1) { 
  margin-top: 4.8rem;
  @include sp {
   margin-top: 2.7rem;
  }
 }
 
-
-.p-blog-details-main__under-sns-links p:nth-of-type(2) {
- text-align: left; 
+.p-blog-details-main__under-sns-links p:nth-of-type(2) { 
  margin-top: 1.5rem; 
 }
 
-.p-blog-details-main__under-sns-links > p:last-of-type {
- text-align: left; 
+.p-blog-details-main__under-sns-links > p:last-of-type { 
  margin-top: 2.6rem;
+}
+
+//クライアントが管理画面から新規にpタグを書いた場合、
+//適切な余白が必要なため、共通スタイルを書いておく
+.p-blog-details-main__under-sns-links p {
+ text-align: left; 
+ margin-top: 1.5rem;
 }
 
 .p-blog-details-main__under-sns-links h2 {
@@ -42,7 +44,6 @@
   line-height: calc(30 / 20);
  }
 }
-
 
 blockquote {
  background: rgb(232,232,232);
@@ -143,32 +144,6 @@ blockquote {
  }
 }
 
-// .wp-block-image {
-//  width: 30rem !important;
-//  @include sp {
-//   width: 33.5rem !important;
-//  }
-//  }
- 
-//  .wp-block-image img {
-//   aspect-ratio: 300 / 200 !important;
-//   object-fit: cover !important;
-//   @include sp {
-//    aspect-ratio: 335 / 200 !important;
-//  }
-//  }
-
- 
-// .c-article-details-body__list {
-// .p-blog-details-main__under-sns-links ul,ol  {
-//  background-color: yellow;
-//  margin-bottom: 44px;
-//  list-style: disc;
-// }
-// .p-blog-details-main__under-sns-links ul {
-//  background-color: aqua;
-// }
-
 .p-blog-details-main__under-sns-links ul, 
 .p-blog-details-main__under-sns-links ol {  
   margin-top: 2.8rem;
@@ -220,6 +195,31 @@ blockquote {
 }
  
  
+// .wp-block-image {
+//  width: 30rem !important;
+//  @include sp {
+//   width: 33.5rem !important;
+//  }
+//  }
+ 
+//  .wp-block-image img {
+//   aspect-ratio: 300 / 200 !important;
+//   object-fit: cover !important;
+//   @include sp {
+//    aspect-ratio: 335 / 200 !important;
+//  }
+//  }
+
+ 
+// .c-article-details-body__list {
+// .p-blog-details-main__under-sns-links ul,ol  {
+//  background-color: yellow;
+//  margin-bottom: 44px;
+//  list-style: disc;
+// }
+// .p-blog-details-main__under-sns-links ul {
+//  background-color: aqua;
+// }
 /* マーカーのスタイルをカスタマイズ */
 // .p-blog-details-main__under-sns-links li::marker {
 //  content: '•'; /* カスタムマーカー */
