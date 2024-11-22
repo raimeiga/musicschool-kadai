@@ -50,8 +50,8 @@
               <div class="p-blog-list__text">               
                <h3 class="p-blog-list__title-mb">
                  <?php 
-                   if(mb_strlen($post->post_title)>55) 
-                   {$title= mb_substr($post->post_title,0,55); echo $title . '...';} 
+                   if(mb_strlen($post->post_title)>35) 
+                   {$title= mb_substr($post->post_title,0,35); echo $title . '...';} 
                    else {echo $post->post_title;} 
                   ?> 
                 </h3>

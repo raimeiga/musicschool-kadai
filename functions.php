@@ -129,28 +129,3 @@ function modify_read_more_link() {
 add_filter('excerpt_more', 'modify_read_more_link');
 
 
-function custom_script() {
- echo '<script type="text/javascript">
-   document.addEventListener("DOMContentLoaded", function() {
-     function adjustTitleLength() {
-       const titles = document.querySelectorAll(".p-blog-details-main-related-article__text p");
-       const windowWidth = window.innerWidth;
-
-       titles.forEach(function(title) {
-         const originalTitle = title.textContent.trim();
-
-         // 画面幅に応じて文字数を制限
-         if (windowWidth <= 767) {
-           title.textContent = originalTitle.length > 25 ? originalTitle.substring(0, 25) + "..." : originalTitle;
-         } else {
-           title.textContent = originalTitle.length > 32 ? originalTitle.substring(0, 32) + "..." : originalTitle;
-         }
-       });
-     }
-
-     adjustTitleLength();
-     window.addEventListener("resize", adjustTitleLength);
-   });
- </script>';
-}
-add_action('wp_footer', 'custom_script');

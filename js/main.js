@@ -93,6 +93,28 @@ jQuery(function($) {
 });
 
 
+// single-related-area.phpの<p class="p-blog-details-main-related-article__title" data-title="<?php echo $post->post_title; ?>"></p>
+// で取得する関連記事のタイトルをPC画面なら32字、SP画面なら20字に設定
+
+function adjustTitleLength() {
+ var width = window.innerWidth; // 現在の画面幅を取得
+ var titles = document.querySelectorAll('.p-blog-details-main-related-article__title'); // タイトル要素を全て取得
+
+ titles.forEach(function (title) {
+   var originalTitle = title.getAttribute('data-title'); // 元のタイトルを取得
+   var maxLength = (width <= 767) ? 20 : 32; // SP画面幅なら20文字、PC画面幅なら32文字を設定
+
+   if (originalTitle.length > maxLength) {
+     title.textContent = originalTitle.substring(0, maxLength) + '...'; // 最大文字数を超えていれば省略記号を付けて切り取る
+   } else {
+     title.textContent = originalTitle; // 最大文字数以内ならそのまま表示
+   }
+ });
+}
+
+// ページ読み込み時とウィンドウサイズ変更時に実行
+window.addEventListener('load', adjustTitleLength);
+window.addEventListener('resize', adjustTitleLength);
 
 
 
