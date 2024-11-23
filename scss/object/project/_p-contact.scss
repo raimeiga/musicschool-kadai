@@ -202,13 +202,18 @@ border: solid 0.05rem #000;
 }
 }
 
-.wpcf7-not-valid-tip {
+.wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+ display: none; 
  width: 80%; 
  padding-top: 6px;
  text-align: left;
  color: $color-red;
  font-size: 1rem; 
  line-height: 1;
+}
+
+.wpcf7-form-control-wrap.is-show .wpcf7-not-valid-tip {
+ display: block;
 }
 
 .wpcf7 form.sent .wpcf7-response-output {
