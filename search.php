@@ -28,13 +28,15 @@
           <a href="<?php the_permalink(); ?>">
             <div class="p-blog-list p-blog__list-row">
               <div class="p-blog-list__image-height-longer">
-              <?php
-              $thumbnail_id = get_post_thumbnail_id($post->ID);
-              $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
-              if (get_post_thumbnail_id($post->ID)) :
-              ?>
-              <img src="<?php echo $thumb_url[0]; ?>" alt="ブログの画像">
-              <?php endif; ?>
+                <?php
+                  $thumbnail_id = get_post_thumbnail_id($post->ID);
+                  if (has_post_thumbnail()): // アイキャッチ画像がある場合
+                      $thumb_url = wp_get_attachment_image_src($thumbnail_id, 'small');
+                      ?>
+                      <img src="<?php echo $thumb_url[0]; ?>" alt="ブログの画像">
+                  <?php else: // アイキャッチ画像がない場合 ?>
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/dummy-image.jpg" alt="ダミー画像"> <!-- ダミー画像のパス -->
+                <?php endif; ?>
               </div>
               <p class="c-caption c-caption--w-pc80-sp90">
               <?php if (get_post_type() === 'blog'):
