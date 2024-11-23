@@ -41,10 +41,11 @@
          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <a href="<?php the_permalink(); ?>" class="p-blog__list-row p-blog-list">
               <div class="p-blog-list__image-height-longer">
-                <?php if (has_post_thumbnail()) {
-                   the_post_thumbnail('custom-size'); // 'custom-size'はカスタムサイズ
-                 }
-                ?>
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail('custom-size'); // アイキャッチ画像があれば表示 ?>
+                <?php else : ?>
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/dummy-image.jpg" alt="ダミー画像"> <!-- アイキャッチ画像がない場合のダミー画像 -->
+                <?php endif; ?>
               </div>
               <p class="c-caption c-caption--w-pc80-sp90">
                 <?php if( has_term('', 'blog_tag', $post->ID) ): $post_term = get_the_terms($post->ID, 'blog_tag'); 
