@@ -90,8 +90,7 @@
       ?>
       <title><?php echo esc_html($title); ?> | きたむらミュージックスクール</title>
       <meta name="description" content="きたむらミュージックスクール公式ホームページの<?php echo esc_html($title); ?>の<?php show_page_number(''); ?>ページ目です。">
-    <?php endif; ?>
- 
+    <?php endif; ?> 
  
   <!-- 検索結果ページ -->
   <?php elseif(is_search()): ?>
