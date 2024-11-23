@@ -113,11 +113,6 @@ a {
   }
 }
 
-.p-blog-details-main__under-sns-links p {
-  text-align: left;
-  margin-top: 1.5rem;
-}
-
 .p-blog-details-main__under-sns-links > p:nth-of-type(1) {
   margin-top: 4.8rem;
 }
@@ -133,6 +128,11 @@ a {
 
 .p-blog-details-main__under-sns-links > p:last-of-type {
   margin-top: 2.6rem;
+}
+
+.p-blog-details-main__under-sns-links p {
+  text-align: left;
+  margin-top: 1.5rem;
 }
 
 .p-blog-details-main__under-sns-links h2 {
@@ -712,7 +712,6 @@ blockquote p::before {
   color: #000;
   font-size: 1.6rem;
   line-height: 2.0625;
-  padding-block: 0.9rem 0.8rem;
 }
 @media only screen and (max-width: 767px) {
   .c-breadcrumb {
@@ -720,7 +719,7 @@ blockquote p::before {
     width: 100%;
     display: block !important;
     line-height: 1.44;
-    padding-block: 0.7rem 0.65rem;
+    padding-block: 0rem 0.6rem;
     padding-inline: 2rem;
   }
 }
@@ -728,10 +727,30 @@ blockquote p::before {
 .c-breadcrumbs-sign {
   margin: 0 1.9rem;
 }
+
+.c-breadcrumbs-text span {
+  background-color: aqua;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  display: inline-block;
+  padding-block: 0.9rem 0.8rem;
+}
 @media only screen and (max-width: 767px) {
-  .c-breadcrumbs-sign {
-    width: 2rem;
-    font-size: 1.6rem;
+  .c-breadcrumbs-text span {
+    padding-block: 0.6rem 0;
+  }
+}
+
+.c-breadcrumbs-text span:hover {
+  opacity: 0.5;
+}
+
+.c-breadcrumb-wrap .c-breadcrumb .c-breadcrumbs-text.current-item {
+  padding-block: 0.9rem 0.8rem;
+}
+@media only screen and (max-width: 767px) {
+  .c-breadcrumb-wrap .c-breadcrumb .c-breadcrumbs-text.current-item {
+    padding-block: 0.6rem 0;
   }
 }
 
@@ -4023,13 +4042,18 @@ body::-ms-scrollbar-thumb:before {
   }
 }
 
-.wpcf7-not-valid-tip {
+.wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+  display: none;
   width: 80%;
   padding-top: 6px;
   text-align: left;
   color: #CB0000;
   font-size: 1rem;
   line-height: 1;
+}
+
+.wpcf7-form-control-wrap.is-show .wpcf7-not-valid-tip {
+  display: block;
 }
 
 .wpcf7 form.sent .wpcf7-response-output {
