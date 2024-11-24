@@ -123,11 +123,13 @@
 }
 
 .c-btn--submit-button {
- width: inherit;
- height: inherit;
- display: block;
+ width: inherit !important;
+ height: inherit !important;
+ display: block !important; 
+ letter-spacing: 0.3em;
+ padding-left: 0.3em;
  // padding-top: 0.1rem;
- cursor: pointer;
+ cursor: pointer ;
  @include max(374px) {
   // padding-top: 0.2rem;
  }

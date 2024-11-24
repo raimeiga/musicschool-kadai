@@ -502,9 +502,11 @@ blockquote p::before {
 }
 
 .c-btn--submit-button {
-  width: inherit;
-  height: inherit;
-  display: block;
+  width: inherit !important;
+  height: inherit !important;
+  display: block !important;
+  letter-spacing: 0.3em;
+  padding-left: 0.3em;
   cursor: pointer;
 }
 .c-blog-article__wrap {
