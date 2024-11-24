@@ -23,8 +23,8 @@
         </div>
         <?php endif; ?>
         <p class="c-blog-article__title u-flex-1">
-        <?php if(mb_strlen($prev_post->post_title)>32) {
-          $title= mb_substr($prev_post->post_title,0,32); echo $title . '...';
+        <?php if(mb_strlen($prev_post->post_title)>25) {
+          $title= mb_substr($prev_post->post_title,0,25); echo $title . '...';
           } else {
           echo $prev_post->post_title;
           } ?>
@@ -55,8 +55,8 @@
        </div>
        <?php endif; ?>
        <p class="c-blog-article__title u-flex-1">
-         <?php if(mb_strlen($next_post->post_title)>32) {
-         $title= mb_substr($next_post->post_title,0,32); echo $title . '...';
+         <?php if(mb_strlen($next_post->post_title)>25) {
+         $title= mb_substr($next_post->post_title,0,25); echo $title . '...';
          } else {
          echo $next_post->post_title;
          } ?>
