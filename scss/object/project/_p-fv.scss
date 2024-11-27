@@ -19,6 +19,7 @@
  width: 100%;
  height: 100%; /* 親要素の高さに合わせる */
  background: rgba(80, 80, 80, 0.502); 
+ mix-blend-mode: multiply; /* 乗算モード */
  pointer-events: none; // この背景（オーバーレイ）がクリックなどの操作に干渉しないようにする 
  z-index: 1; 
 }
