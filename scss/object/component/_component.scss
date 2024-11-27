@@ -4,11 +4,12 @@
 
 .p-blog-details-main__under-sns-links {
  @include sp {
-  padding-bottom: 1rem;  
+  padding-bottom: 1rem;
  }
 }
 
 .p-blog-details-main__under-sns-links > p:nth-of-type(1) { 
+ text-align: left; 
  margin-top: 4.8rem;
  @include sp {
   margin-top: 2.7rem;
@@ -16,18 +17,19 @@
 }
 
 .p-blog-details-main__under-sns-links p:nth-of-type(2) { 
+ text-align: left; 
  margin-top: 1.5rem; 
 }
 
 .p-blog-details-main__under-sns-links > p:last-of-type { 
+ text-align: left; 
  margin-top: 2.6rem;
 }
 
 //クライアントが管理画面から新規にpタグを書いた場合、
 //適切な余白が必要なため、共通スタイルを書いておく
-.p-blog-details-main__under-sns-links p {
- text-align: left; 
- margin-top: 1.5rem;
+.p-blog-details-main__under-sns-links p { 
+ margin-block: 1.5rem;
 }
 
 .p-blog-details-main__under-sns-links h2 {
@@ -48,7 +50,7 @@
 blockquote {
  background: rgb(232,232,232);
  //padding: 20px 30px 14px;
- padding: 2rem 3rem 1.4rem;
+ padding: 0.1rem 3rem 0.1rem;
  margin-bottom:0;
  p {
   text-align: left;
@@ -68,7 +70,7 @@ blockquote {
  @include sp {
   background: rgb(232,232,232);
   //padding: 20px 30px 14px;
-  padding: 2rem 3rem 1.4rem;
+  padding: 0.1rem 3rem 0.1rem;
   margin-bottom: 2rem;
   p {
     font-size: 1.6rem;
