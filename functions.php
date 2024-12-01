@@ -9,8 +9,9 @@ function custom_theme_scripts() {
     // slickのCSS
     wp_enqueue_style('slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
 
-    // スタイルシート
-    wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', array(), '1.0.2');
+    // スタイルシート（キャッシュバスティング）
+    $style_version = date("ymdHi", filemtime(get_template_directory() . '/css/style.css')); // 最終更新日時を取得
+    wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css', array(), $style_version); // バージョンを追加
 
     // Noto Sans JPフォント
     wp_enqueue_style('noto-font', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
