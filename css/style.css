@@ -140,6 +140,7 @@ a {
 .p-blog-details-main__under-sns-links h2 {
   text-align: left;
   margin-top: 3.3rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: bold;
   line-height: 2;
@@ -156,14 +157,14 @@ a {
 blockquote {
   background: rgb(232, 232, 232);
   padding: 0.1rem 3rem 0.1rem;
-  margin-bottom: 0;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 blockquote p {
   text-align: left;
   font-size: 1.8rem;
   line-height: 1.6666666667;
   background: rgb(232, 232, 232);
-  margin-bottom: 0;
   padding-left: 3.7rem;
   position: relative;
 }
@@ -183,7 +184,6 @@ blockquote p::before {
     font-size: 1.6rem;
     line-height: 1.875;
     background: rgb(232, 232, 232);
-    margin-bottom: 0;
     padding-left: 3.7rem;
     position: relative;
   }
@@ -232,6 +232,7 @@ blockquote p::before {
   width: 30rem;
   overflow: hidden;
   margin-top: 1.7rem;
+  margin-bottom: 1.7rem;
 }
 @media only screen and (max-width: 767px) {
   .p-blog-details-main__under-sns-links figure {
@@ -289,7 +290,7 @@ blockquote p::before {
 
 .p-blog-details-main__under-sns-links hr {
   border-top: 0.05rem solid;
-  margin-top: 4rem;
+  margin-block: 4rem;
 }
 @media only screen and (max-width: 767px) {
   .p-blog-details-main__under-sns-links hr {
@@ -306,7 +307,6 @@ blockquote p::before {
   opacity: 0.5;
 }
 
-/* マーカーのスタイルをカスタマイズ */
 .c-hamburger {
   width: 7.1rem;
   height: 100%;
@@ -3781,6 +3781,7 @@ body::-ms-scrollbar-thumb:before {
   padding-bottom: 6.5rem;
   font-size: 1.8rem;
   line-height: 1.6666666667;
+  color: blue;
 }
 @media only screen and (max-width: 767px) {
   .p-contact__inner p {
@@ -4078,6 +4079,16 @@ body::-ms-scrollbar-thumb:before {
   display: none;
 }
 
+/* お問い合わせページのみreCAPTCHAを表示 */
+.grecaptcha-badge {
+  display: none;
+}
+
+body.page-contact .grecaptcha-badge {
+  display: block;
+}
+
+/* その他のページでは非表示 */
 .p-contact-send {
   padding-block: 6.9rem 9rem;
 }

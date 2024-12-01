@@ -250,3 +250,17 @@ display: none;
 //  margin: 0 24px;
 //  position: relative;
 // }
+
+/* お問い合わせページのみreCAPTCHAを表示 */
+.grecaptcha-badge {
+ display: none !important;
+}
+
+body.page-contact .grecaptcha-badge {
+ display: block !important;
+}
+
+/* その他のページでは非表示 */
+// body:not(.page-contact) .grecaptcha-badge {
+//  display: none;
+// }

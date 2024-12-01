@@ -36,6 +36,7 @@
  text-align: left;
  // margin-block: 3.3rem 1.5rem;
  margin-top: 3.3rem;
+ margin-bottom: 1rem; 
  font-size: 2rem; 
  font-weight: bold;
  line-height: calc(40 / 20);
@@ -51,13 +52,13 @@ blockquote {
  background: rgb(232,232,232);
  //padding: 20px 30px 14px;
  padding: 0.1rem 3rem 0.1rem;
- margin-bottom:0;
+ margin-top: 1.2rem;
+ margin-bottom: 1.2rem;
  p {
   text-align: left;
    font-size: 1.8rem;
    line-height:calc(30 / 18);
    background: rgb(232,232,232);   
-   margin-bottom: 0;
    padding-left: 3.7rem;
    position: relative;
    &::before {
@@ -76,7 +77,6 @@ blockquote {
     font-size: 1.6rem;
     line-height: calc(30 / 16);
     background: rgb(232,232,232);
-    margin-bottom: 0;
     padding-left: 3.7rem;
     position: relative;
     &::before {
@@ -105,11 +105,9 @@ blockquote {
   font-weight: bold;  
   line-height: calc(30 / 20);
   margin-top: 4.8rem;
- margin-bottom: 1.5rem;
- 
+  margin-bottom: 1.5rem; 
  }
 }
-
 
 // .c-article-details-body__head-small ::before {
 .p-blog-details-main__under-sns-links h3::before  {
@@ -125,11 +123,10 @@ blockquote {
 
 // .c-article-details-body__img {
 .p-blog-details-main__under-sns-links figure  {
-   width: 30rem;
-  // max-width: 30rem;
-  // max-height: 20rem;
+  width: 30rem;  
   overflow: hidden;
   margin-top: 1.7rem;
+  margin-bottom: 1.7rem;
   @include sp {
    width: 33.5rem;
    margin-block: 4rem 2.8rem;
@@ -182,7 +179,7 @@ blockquote {
  // .c-article-details-body__border {
  .p-blog-details-main__under-sns-links hr  {
   border-top: 0.05rem solid; 
-  margin-top: 4rem;
+  margin-block: 4rem;
   @include sp {
    margin-top: 3rem;
   }
@@ -195,56 +192,3 @@ blockquote {
 .p-blog-details-main__under-sns-links p a:last-child:hover {
  opacity: 0.5;
 }
- 
- 
-// .wp-block-image {
-//  width: 30rem !important;
-//  @include sp {
-//   width: 33.5rem !important;
-//  }
-//  }
- 
-//  .wp-block-image img {
-//   aspect-ratio: 300 / 200 !important;
-//   object-fit: cover !important;
-//   @include sp {
-//    aspect-ratio: 335 / 200 !important;
-//  }
-//  }
-
- 
-// .c-article-details-body__list {
-// .p-blog-details-main__under-sns-links ul,ol  {
-//  background-color: yellow;
-//  margin-bottom: 44px;
-//  list-style: disc;
-// }
-// .p-blog-details-main__under-sns-links ul {
-//  background-color: aqua;
-// }
-/* マーカーのスタイルをカスタマイズ */
-// .p-blog-details-main__under-sns-links li::marker {
-//  content: '•'; /* カスタムマーカー */
-//  color: red; /* マーカーの色を赤にする */
-//  font-size: 1.8rem; /* マーカーのサイズを変更 */
-//  position: absolute;
-//  left: 5px;
-// }
-
-// .c-article-details-body__blockquote {
-// .p-blog-details-main__under-sns-links blockquote {
-//  background: rgb(232, 232, 232);
-//  display: flex;
-//  padding: 20px 30px;
-//  margin-bottom: 20px;
-// }
-
-
-// // .c-article-details-body__blockquote-icon {
-// .p-blog-details-main__under-sns-links blockquote::before  {
-//  width: 27px;
-//  flex-shrink: 0;
-//  margin-right: 10px;
-// }
-
-

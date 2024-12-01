@@ -139,3 +139,14 @@ function limit_breadcrumb_title_length( $title ) {
 }
 add_filter( 'bcn_breadcrumb_title', 'limit_breadcrumb_title_length' );
 
+
+/*recaptchaをお問い合わせページのみに表示させるため、
+  body.page-contactを付与させるためのコード */
+function add_contact_page_body_class($classes) {
+ if (is_page('contact')) { // お問い合わせページのスラッグが 'contact' の場合
+     $classes[] = 'page-contact';
+ }
+ return $classes;
+}
+add_filter('body_class', 'add_contact_page_body_class');
+

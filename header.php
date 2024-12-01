@@ -120,7 +120,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body style="display: none;">
+<body  <?php body_class(); ?> style="display: none;">
   <div id="wrapper">
     <!-- header -->
     <header class="l-header">
