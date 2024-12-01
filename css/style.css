@@ -3781,7 +3781,6 @@ body::-ms-scrollbar-thumb:before {
   padding-bottom: 6.5rem;
   font-size: 1.8rem;
   line-height: 1.6666666667;
-  color: blue;
 }
 @media only screen and (max-width: 767px) {
   .p-contact__inner p {
@@ -4081,11 +4080,11 @@ body::-ms-scrollbar-thumb:before {
 
 /* お問い合わせページのみreCAPTCHAを表示 */
 .grecaptcha-badge {
-  display: none;
+  display: none !important;
 }
 
 body.page-contact .grecaptcha-badge {
-  display: block;
+  display: block !important;
 }
 
 /* その他のページでは非表示 */
