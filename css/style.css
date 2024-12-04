@@ -3903,6 +3903,7 @@ body::-ms-scrollbar-thumb:before {
 }
 
 .p-contact__checkboxes {
+  width: 30rem;
   padding-bottom: 2.7rem;
 }
 @media only screen and (max-width: 767px) {
@@ -3937,11 +3938,33 @@ body::-ms-scrollbar-thumb:before {
 .wpcf7-list-item {
   position: relative;
   padding-left: 2rem;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 @media only screen and (max-width: 767px) {
   .wpcf7-list-item {
     padding-left: 1rem;
   }
+}
+
+.wpcf7-list-item:nth-child(1) {
+  width: 285px;
+}
+
+.wpcf7-list-item:nth-child(2) {
+  width: 195px;
+}
+
+.wpcf7-list-item:nth-child(3) {
+  width: 105px;
+}
+
+.wpcf7-list-item:nth-child(4) {
+  width: 87px;
+}
+
+.wpcf7-list-item:hover {
+  opacity: 0.4;
 }
 
 .wpcf7-form-control .wpcf7-list-item label::before {

@@ -101,6 +101,7 @@ padding-bottom: 2.6rem;
 
 //------チェックボックス------
 .p-contact__checkboxes {  
+ width: 30rem;
  padding-bottom: 2.7rem;
  @include sp {
   padding-bottom: 0.7rem;
@@ -123,12 +124,37 @@ padding-bottom: 2.6rem;
   row-gap: 0.9rem; /* 要素間の隙間を調整 */  
  }
 
-.wpcf7-list-item {
+.wpcf7-list-item { 
  position: relative; 
- padding-left: 2rem;
+ padding-left: 2rem; 
+ transition: opacity 0.4s;
  @include sp {
   padding-left: 1rem;
  }
+}
+
+.wpcf7-list-item:nth-child(1) {
+ width: 285px;
+ // background-color: yellow;
+}
+
+.wpcf7-list-item:nth-child(2) {
+ width: 195px;
+ // background-color: yellow;
+}
+
+.wpcf7-list-item:nth-child(3) {
+ width: 105px;
+ // background-color: yellow;
+}
+
+.wpcf7-list-item:nth-child(4) {
+ width: 87px;
+ // background-color: yellow;
+}
+
+.wpcf7-list-item:hover {
+ opacity: 0.4;
 }
 
 // 疑似要素　チェックボックス
@@ -144,7 +170,6 @@ padding-bottom: 2.6rem;
  transform: translateY(-50%);
  z-index: 9;
 }
-
 
 // // 疑似要素　チェック時のマーク、チェック前は非表示にしとく
 .wpcf7-form-control .wpcf7-list-item label::after {
