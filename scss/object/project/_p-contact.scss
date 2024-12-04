@@ -33,10 +33,10 @@
 }
 
 .p-contact__group label,
-.p-contact__group input { 
+.p-contact__group input,
+.wpcf7-list-item { 
  cursor: pointer;
 }
-
 
 .p-contact__group:nth-of-type(4) {
 padding-bottom: 2.6rem;
@@ -126,36 +126,32 @@ padding-bottom: 2.6rem;
 
 .wpcf7-list-item { 
  position: relative; 
- padding-left: 2rem; 
- transition: opacity 0.4s;
+ padding-left: 2rem;  
  @include sp {
   padding-left: 1rem;
  }
 }
 
 .wpcf7-list-item:nth-child(1) {
- width: 284px;
+ width: 278px;
  //background-color: yellow;
 }
 
 .wpcf7-list-item:nth-child(2) {
- width: 195px;
+ width: 188px;
  //background-color: yellow;
 }
 
 .wpcf7-list-item:nth-child(3) {
- width: 104px;
+ width: 97px;
  //background-color: yellow;
 }
 
 .wpcf7-list-item:nth-child(4) {
- width: 87px;
+ width: 81px;
  //background-color: yellow;
 }
 
-.wpcf7-list-item:hover {
- opacity: 0.4;
-}
 
 // 疑似要素　チェックボックス
 .wpcf7-form-control .wpcf7-list-item label::before {

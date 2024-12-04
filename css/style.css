@@ -3812,7 +3812,8 @@ body::-ms-scrollbar-thumb:before {
 }
 
 .p-contact__group label,
-.p-contact__group input {
+.p-contact__group input,
+.wpcf7-list-item {
   cursor: pointer;
 }
 
@@ -3938,8 +3939,6 @@ body::-ms-scrollbar-thumb:before {
 .wpcf7-list-item {
   position: relative;
   padding-left: 2rem;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
 }
 @media only screen and (max-width: 767px) {
   .wpcf7-list-item {
@@ -3948,23 +3947,19 @@ body::-ms-scrollbar-thumb:before {
 }
 
 .wpcf7-list-item:nth-child(1) {
-  width: 284px;
+  width: 278px;
 }
 
 .wpcf7-list-item:nth-child(2) {
-  width: 195px;
+  width: 188px;
 }
 
 .wpcf7-list-item:nth-child(3) {
-  width: 104px;
+  width: 97px;
 }
 
 .wpcf7-list-item:nth-child(4) {
-  width: 87px;
-}
-
-.wpcf7-list-item:hover {
-  opacity: 0.4;
+  width: 81px;
 }
 
 .wpcf7-form-control .wpcf7-list-item label::before {
