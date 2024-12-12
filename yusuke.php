@@ -1,3 +1,212 @@
+<div class="p-voice__inner">
+  <h2 class="c-section-title30">生徒さんたちの声</h2>      
+  <div class="p-voice__lists js-slider slick-initialized slick-slider">
+    <button type="button" class="slick-prev slick-arrow" style="">
+      <img src="http://musicschool-kadai.local/wp-content/themes/musicschool-kadai/images/arrow-prev.svg" alt="Previous">
+    </button>
+    <div class="slick-list draggable">
+      <div class="slick-track" style="opacity: 1; width: 4410px; transform: translate3d(-882px, 0px, 0px);">
+         <a href="http://musicschool-kadai.local/result/test-2-3-5/" class="slick-slide slick-cloned" data-slick-index="-3" id="" aria-hidden="true" style="width: 270px;" tabindex="-1">
+          <div class="p-voice__list p-voice-list">
+            <div class="p-voice-list__image">
+              <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+            <p class="p-voice-list__name p-voice-list__name--my">
+              専業主婦                 井上さん
+            </p>
+            <p class="p-voice-list__text">
+              元々は趣味で始めたギターですが、教室に通った1年間で...               
+            </p>
+          </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-4-2-2/" class="slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" style="width: 270px;" tabindex="-1">
+          <div class="p-voice__list p-voice-list">
+            <div class="p-voice-list__image">
+              <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result03.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result03.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result03-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result03-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+            <p class="p-voice-list__name p-voice-list__name--my">
+              都内大学生                 田森さん
+            </p>
+            <p class="p-voice-list__text">
+              就職する前にビジネスの事が学べるし、好きな音楽で稼げ...               
+            </p>
+          </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-3-4/" class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 270px;" tabindex="-1">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               専業主婦                 井上さん
+             </p>
+             <p class="p-voice-list__text">
+               元々は趣味で始めたギターですが、教室に通った1年間で...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-5/" class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 270px;" tabindex="0">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img src="http://musicschool-kadai.local/wp-content/themes/musicschool-kadai/images/dummy-image.jpg" alt="ダミー画像">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               証券会社勤務                 丸山さん
+             </p>
+             <p class="p-voice-list__text">
+               昔やっていた音楽活動で、副収入が得られるようになった...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-3-2/" class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 270px;" tabindex="0">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               専業主婦                 井上さん
+             </p>
+             <p class="p-voice-list__text">
+               元々は趣味で始めたギターですが、教室に通った1年間で...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-3-3-2/" class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 270px;" tabindex="0">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result02.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result02.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result02-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result02-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               IT会社勤務                 S.Eさん
+             </p>
+             <p class="p-voice-list__text">
+               プロの指導が受けられるので、技術が確実に上がるし、音...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-3-5/" class="slick-slide" data-slick-index="3" aria-hidden="true" style="width: 270px;" tabindex="-1">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               専業主婦                 井上さん
+             </p>
+             <p class="p-voice-list__text">
+               元々は趣味で始めたギターですが、教室に通った1年間で...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-4-2-2/" class="slick-slide" data-slick-index="4" aria-hidden="true" style="width: 270px;" tabindex="-1">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result03.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result03.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result03-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result03-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               都内大学生                 田森さん
+             </p>
+             <p class="p-voice-list__text">
+               就職する前にビジネスの事が学べるし、好きな音楽で稼げ...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-3-4/" class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 270px;" tabindex="-1">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               専業主婦                 井上さん
+             </p>
+             <p class="p-voice-list__text">
+               元々は趣味で始めたギターですが、教室に通った1年間で...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-5/" class="slick-slide slick-cloned" data-slick-index="6" id="" aria-hidden="true" style="width: 270px;" tabindex="-1">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img src="http://musicschool-kadai.local/wp-content/themes/musicschool-kadai/images/dummy-image.jpg" alt="ダミー画像">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               証券会社勤務                 丸山さん
+             </p>
+             <p class="p-voice-list__text">
+               昔やっていた音楽活動で、副収入が得られるようになった...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-3-2/" class="slick-slide slick-cloned" data-slick-index="7" id="" aria-hidden="true" style="width: 270px;" tabindex="-1">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               専業主婦                 井上さん
+             </p>
+             <p class="p-voice-list__text">
+               元々は趣味で始めたギターですが、教室に通った1年間で...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-3-3-2/" class="slick-slide slick-cloned" data-slick-index="8" id="" aria-hidden="true" style="width: 270px;" tabindex="-1">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result02.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result02.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result02-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result02-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               IT会社勤務                 S.Eさん
+             </p>
+             <p class="p-voice-list__text">
+               プロの指導が受けられるので、技術が確実に上がるし、音...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-3-5/" class="slick-slide slick-cloned" data-slick-index="9" id="" aria-hidden="true" style="width: 270px;" tabindex="-1">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               専業主婦                 井上さん
+             </p>
+             <p class="p-voice-list__text">
+               元々は趣味で始めたギターですが、教室に通った1年間で...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-4-2-2/" class="slick-slide slick-cloned" data-slick-index="10" id="" aria-hidden="true" style="width: 270px;" tabindex="-1">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result03.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result03.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result03-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result03-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               都内大学生                 田森さん
+             </p>
+             <p class="p-voice-list__text">
+               就職する前にビジネスの事が学べるし、好きな音楽で稼げ...               
+             </p>
+           </div>
+         </a>
+         <a href="http://musicschool-kadai.local/result/test-2-3-4/" class="slick-slide slick-cloned" data-slick-index="11" id="" aria-hidden="true" style="width: 270px;" tabindex="-1">
+           <div class="p-voice__list p-voice-list">
+             <div class="p-voice-list__image">
+               <img width="774" height="546" src="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg" class="attachment-small size-small wp-post-image" alt="" decoding="async" srcset="http://musicschool-kadai.local/wp-content/uploads/2022/01/result04.jpg 774w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-300x212.jpg 300w, http://musicschool-kadai.local/wp-content/uploads/2022/01/result04-768x542.jpg 768w" sizes="(max-width: 774px) 100vw, 774px">               </div>
+             <p class="p-voice-list__name p-voice-list__name--my">
+               専業主婦                 井上さん
+             </p>
+             <p class="p-voice-list__text">
+               元々は趣味で始めたギターですが、教室に通った1年間で...               
+             </p>
+           </div>
+         </a>
+      </div>
+    </div> 
+    <button type="button" class="slick-next slick-arrow" style="">
+      <img src="http://musicschool-kadai.local/wp-content/themes/musicschool-kadai/images/arrow-next.svg" alt="Next">
+    </button>
+  </div>        
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="p-blog-details-main__under-sns-links">            
   <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入本文が入ります。</p>
   <h2 class="wp-block-heading">H2見出しが入ります。H2見出しが入ります。</h2>
