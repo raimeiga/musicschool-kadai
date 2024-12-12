@@ -134,6 +134,7 @@ a {
 }
 
 .p-blog-details-main__under-sns-links p {
+  text-align: left;
   margin-block: 1.5rem;
 }
 
@@ -722,8 +723,9 @@ blockquote p::before {
     max-width: none;
     width: 100%;
     display: block !important;
-    line-height: 1.44;
-    padding-block: 0rem 0.6rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-block: 0;
     padding-inline: 2rem;
   }
 }
@@ -732,28 +734,33 @@ blockquote p::before {
   margin: 0 1.9rem;
 }
 
-.c-breadcrumbs-text span {
+.c-breadcrumbs-text {
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
+}
+
+.c-breadcrumbs-text:hover {
+  opacity: 0.5;
+}
+
+.c-breadcrumbs-text span {
   display: inline-block;
   padding-block: 1rem 0.7rem;
 }
 @media only screen and (max-width: 767px) {
   .c-breadcrumbs-text span {
-    padding-block: 0.6rem 0;
+    padding-block: 0.2rem 0.1rem;
   }
 }
 
-.c-breadcrumbs-text span:hover {
-  opacity: 0.5;
-}
-
 .c-breadcrumb-wrap .c-breadcrumb .c-breadcrumbs-text.current-item {
-  padding-block: 0.9rem 0.8rem;
+  display: inline-block;
+  padding-block: 1rem 0.7rem;
 }
 @media only screen and (max-width: 767px) {
   .c-breadcrumb-wrap .c-breadcrumb .c-breadcrumbs-text.current-item {
-    padding-block: 0.6rem 0;
+    display: initial;
+    padding-block: 0.2rem 0.1rem;
   }
 }
 
@@ -824,11 +831,11 @@ blockquote p::before {
   background: #000;
 }
 .c-pager .dots {
-  background-color: yellow;
   width: 38px;
   font-size: 1.8rem;
   font-weight: bold;
   margin-right: 0px;
+  padding-top: 0.2rem;
   border: none;
   pointer-events: none;
 }
@@ -1528,9 +1535,10 @@ blockquote p::before {
   height: auto; /* 高さを自動調整 */
 }
 
-.p-voice-list {
+.slick-slide {
   margin-inline: 1.2rem;
 }
+
 @media only screen and (max-width: 767px) {
   .p-voice-list {
     margin-inline: 0;
@@ -4072,7 +4080,7 @@ body::-ms-scrollbar-thumb:before {
   padding-top: 6px;
   text-align: left;
   color: #CB0000;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1;
 }
 
