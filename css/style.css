@@ -824,13 +824,12 @@ blockquote p::before {
   background: #000;
 }
 .c-pager .dots {
+  background-color: yellow;
   width: 38px;
-  display: inline-block;
   font-size: 1.8rem;
   font-weight: bold;
   margin-right: 0px;
   border: none;
-  padding-top: 5px;
   pointer-events: none;
 }
 
