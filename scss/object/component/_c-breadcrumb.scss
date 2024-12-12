@@ -20,37 +20,41 @@
   max-width: none;
   width: 100%;  
   display: block !important;
-  line-height: 1.44;
-  padding-block: 0rem 0.6rem;
+  flex-wrap: wrap; 
+  // line-height: 1.44;
+  padding-block: 0;
   padding-inline: 2rem;  
  }
 }
 
-.c-breadcrumbs-sign { 
- //background-color: yellow;
+.c-breadcrumbs-sign {  
  margin: 0 1.9rem; 
 }
 
-.c-breadcrumbs-text span {
- //background-color: aqua;
+.c-breadcrumbs-text {
  transition: opacity .4s;
- display: inline-block;
- padding-block: 1rem 0.7rem; 
- @include sp {
-  padding-block: 0.6rem 0; 
-  // padding-block: 6px 0px; 
- }
 }
 
-.c-breadcrumbs-text span:hover {
+.c-breadcrumbs-text:hover {
   opacity: 0.5;
 }
 
+.c-breadcrumbs-text span {
+ // background-color: aqua; 
+ display: inline-block;
+ padding-block: 1rem 0.7rem; 
+ @include sp {  
+  padding-block: 0.2rem 0.1rem; 
+ }
+}
+
 .c-breadcrumb-wrap .c-breadcrumb .c-breadcrumbs-text.current-item {
- padding-block: 0.9rem 0.8rem; 
- @include sp {
-  padding-block: 0.6rem 0; 
-  // padding-block: 6px 0px; 
+ //background-color: yellow;
+ display: inline-block;
+ padding-block: 1rem 0.7rem; 
+ @include sp {  
+  display: initial;
+  padding-block: 0.2rem 0.1rem; 
  }
 }
 

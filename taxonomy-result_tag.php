@@ -40,10 +40,11 @@
          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
            <a href="<?php the_permalink(); ?>" class="p-result-list__list p-result-list-list">              
              <div class="p-result-list-list__image">
-             <?php if (has_post_thumbnail()) {
-               the_post_thumbnail('custom-size'); // 'custom-size'はカスタムサイズ
-               }
-             ?>
+               <?php if (has_post_thumbnail()) : ?>
+                 <?php the_post_thumbnail('custom-size'); // アイキャッチ画像があれば表示 ?>
+               <?php else : ?>
+                 <img src="<?php echo get_template_directory_uri(); ?>/images/dummy-image.jpg" alt="ダミー画像"> <!-- アイキャッチ画像がない場合のダミー画像 -->
+               <?php endif; ?>
              </div>
              <p class="c-caption c-caption--w100">
                <?php if( has_term('', 'result_tag', $post->ID) ): $post_term = get_the_terms($post->ID, 'result_tag'); 

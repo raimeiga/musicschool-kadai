@@ -29,6 +29,7 @@
 //クライアントが管理画面から新規にpタグを書いた場合、
 //適切な余白が必要なため、共通スタイルを書いておく
 .p-blog-details-main__under-sns-links p { 
+ text-align: left; 
  margin-block: 1.5rem;
 }
 
