@@ -48,7 +48,7 @@
   transform: translateY(-50%); /* 中央に合わせる */
   z-index: 10; //これないとprev矢印が見えない。
   @include sp {
-    top: 48%;
+    top: 50%;
     transform: translateY(-50%); /* 中央に合わせる */
     opacity: 1;
     z-index: 10; //これないとprev矢印が見えない。

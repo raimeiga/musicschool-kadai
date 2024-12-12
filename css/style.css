@@ -1511,7 +1511,7 @@ blockquote p::before {
 }
 @media only screen and (max-width: 767px) {
   .slick-prev, .slick-next {
-    top: 48%;
+    top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); /* 中央に合わせる */
     opacity: 1;
