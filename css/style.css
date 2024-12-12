@@ -1477,10 +1477,17 @@ blockquote p::before {
 }
 
 .p-voice__lists {
-  width: 94rem;
+  width: 100rem;
   padding-top: 3.6rem;
-  padding-inline: 3rem;
+  padding-inline: 6rem;
   margin: auto;
+}
+@media only screen and (max-width: 1000px) {
+  .p-voice__lists {
+    width: 100vw;
+    padding-inline: 6vw;
+    margin: auto;
+  }
 }
 @media only screen and (max-width: 767px) {
   .p-voice__lists {
@@ -1513,7 +1520,7 @@ blockquote p::before {
 }
 
 .slick-prev {
-  left: -0.2rem; /* 左矢印の位置 */
+  left: 2.1rem; /* 左矢印の位置 */
 }
 @media only screen and (max-width: 767px) {
   .slick-prev {
@@ -1522,7 +1529,7 @@ blockquote p::before {
 }
 
 .slick-next {
-  right: -0.2rem; /* 右矢印の位置 */
+  right: 2.1rem; /* 右矢印の位置 */
 }
 @media only screen and (max-width: 767px) {
   .slick-next {
@@ -1537,6 +1544,11 @@ blockquote p::before {
 
 .slick-slide {
   margin-inline: 1.2rem;
+}
+@media only screen and (max-width: 767px) {
+  .slick-slide {
+    margin-inline: 0;
+  }
 }
 
 @media only screen and (max-width: 767px) {

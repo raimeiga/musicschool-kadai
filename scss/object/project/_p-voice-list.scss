@@ -6,7 +6,7 @@
   // width: 27rem; 
   // slick使うと、スライドの幅はslickが決めて
   // くるので、widthを上書きできない
-  
+  // margin-inline: 1.2rem;   
   @include sp {   
     margin-inline: 0;      
   }
