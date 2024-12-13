@@ -31,22 +31,20 @@
  margin: 0 1.9rem; 
 }
 
-.c-breadcrumbs-text {
- transition: opacity .4s;
-}
-
-.c-breadcrumbs-text:hover {
-  opacity: 0.5;
-}
-
 .c-breadcrumbs-text span {
  // background-color: aqua; 
  display: inline-block;
  padding-block: 1rem 0.7rem; 
+ transition: opacity .4s;
  @include sp {  
   padding-block: 0.2rem 0.1rem; 
  }
 }
+
+.c-breadcrumbs-text span:hover {
+ opacity: 0.5;
+}
+
 
 .c-breadcrumb-wrap .c-breadcrumb .c-breadcrumbs-text.current-item {
  //background-color: yellow;

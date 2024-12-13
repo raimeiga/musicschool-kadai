@@ -734,23 +734,20 @@ blockquote p::before {
   margin: 0 1.9rem;
 }
 
-.c-breadcrumbs-text {
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-
-.c-breadcrumbs-text:hover {
-  opacity: 0.5;
-}
-
 .c-breadcrumbs-text span {
   display: inline-block;
   padding-block: 1rem 0.7rem;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 @media only screen and (max-width: 767px) {
   .c-breadcrumbs-text span {
     padding-block: 0.2rem 0.1rem;
   }
+}
+
+.c-breadcrumbs-text span:hover {
+  opacity: 0.5;
 }
 
 .c-breadcrumb-wrap .c-breadcrumb .c-breadcrumbs-text.current-item {
