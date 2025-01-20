@@ -16,8 +16,10 @@ html {
    // font-size: calc(10 / 940 * 100vw);   
    font-size: vw(10, 940);
    // ↑ FV以外の各セクションでは画面幅940px以下から
-   // 全てのサイズ・距離がvw(10, 940)の比率で縮小。941以上では縮小・拡大どちらもしない。
+   // 全てのfont-size:10px,width:940pxという比率で縮小。
+   // width:941;以上では縮小・拡大どちらもしない。
  }
+
  @include sp {   
    font-size: vw(10, 375);
    // spなので、_mixin.scssに書いた関数で、@media (max-width: 767px)って意味なので、
